@@ -51,6 +51,9 @@ Följande är de konfigurationer Discosoffans BMS-moduler använder. Dessa anges
 #define TMIN_UV_ALARM_S					60.0
 ```
 
+BMS-modulerna är monterade i 3D-printade hållare. 3D STEP-filerna till dessa finns i [bms_box](/mechanics/bms_box). Dessa ser ut som nedan:
+![bms_box](/mechanics/bms_box/bms_box_assembly.png)
+
 # MCU-kort
 Kortet vilket sköter styrningen av soffan. Denna huserar en Nucleo-F401RE dev board.
 ![mcu-kort](electronics/mcu-kort/mcu-kort.svg)
