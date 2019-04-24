@@ -1,0 +1,945 @@
+PCBNEW-LibModule-V1  
+# encoding utf-8
+Units mm
+$INDEX
+MODULE_NUCLEO-L053R8
+$EndINDEX
+$MODULE MODULE_NUCLEO-L053R8
+Po 0 0 0 15 00000000 00000000 ~~
+Li MODULE_NUCLEO-L053R8
+Cd 
+Sc 00000000
+At STD
+Op 0 0 0
+.SolderMask 0
+.SolderPaste 0
+T0 -32.004 -42.799 1.4 1.4 0 0.05 N V 21 "MODULE_NUCLEO-L053R8"
+T1 -31.115 42.291 1.4 1.4 0 0.05 N V 21 "VAL**"
+DS -35 -41.25 35 -41.25 0.127 21
+DS 35 -41.25 35 41.25 0.127 21
+DS 35 41.25 -35 41.25 0.127 21
+DS -35 41.25 -35 -41.25 0.127 21
+DS 35 -16.29 -35 -16.29 0.127 27
+DS -35 -41.25 35 -41.25 0.127 27
+DS -35 41.25 -35 -41.25 0.127 27
+DS 35 -41.25 35 41.25 0.127 27
+DS 35 41.25 -35 41.25 0.127 27
+DS -35.25 -41.5 35.25 -41.5 0.05 26
+DS 35.25 -41.5 35.25 41.5 0.05 26
+DS 35.25 41.5 -35.25 41.5 0.05 26
+DS -35.25 41.5 -35.25 -41.5 0.05 26
+$PAD
+Sh "CN7_5" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 -4.43
+$EndPAD
+$PAD
+Sh "CN7_3" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 -6.97
+$EndPAD
+$PAD
+Sh "CN7_6" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 -4.43
+$EndPAD
+$PAD
+Sh "CN7_4" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 -6.97
+$EndPAD
+$PAD
+Sh "CN10_3" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 -6.97
+$EndPAD
+$PAD
+Sh "CN10_4" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 -6.97
+$EndPAD
+$PAD
+Sh "CN6_1" R 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 0.65
+$EndPAD
+$PAD
+Sh "CN8_1" R 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 23.51
+$EndPAD
+$PAD
+Sh "CN7_1" R 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 -9.51
+$EndPAD
+$PAD
+Sh "CN7_2" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 -9.51
+$EndPAD
+$PAD
+Sh "CN10_1" R 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 -9.51
+$EndPAD
+$PAD
+Sh "CN10_2" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 -9.51
+$EndPAD
+$PAD
+Sh "CN9_1" R 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 36.21
+$EndPAD
+$PAD
+Sh "CN5_1" R 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 14.37
+$EndPAD
+$PAD
+Sh "Hole" C 3.05 3.05 0 0 0
+Dr 3.05 0 0
+At HOLE N 00E0FFFF
+Po 24.13 -12.05
+$EndPAD
+$PAD
+Sh "Hole" C 3.05 3.05 0 0 0
+Dr 3.05 0 0
+At HOLE N 00E0FFFF
+Po -24.13 -13.32
+$EndPAD
+$PAD
+Sh "Hole" C 3.05 3.05 0 0 0
+Dr 3.05 0 0
+At HOLE N 00E0FFFF
+Po 8.89 38.75
+$EndPAD
+$PAD
+Sh "CN7_7" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 -1.89
+$EndPAD
+$PAD
+Sh "CN7_8" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 -1.89
+$EndPAD
+$PAD
+Sh "CN7_9" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 0.65
+$EndPAD
+$PAD
+Sh "CN7_10" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 0.65
+$EndPAD
+$PAD
+Sh "CN7_11" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 3.19
+$EndPAD
+$PAD
+Sh "CN7_12" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 3.19
+$EndPAD
+$PAD
+Sh "CN7_13" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 5.73
+$EndPAD
+$PAD
+Sh "CN7_14" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 5.73
+$EndPAD
+$PAD
+Sh "CN7_15" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 8.27
+$EndPAD
+$PAD
+Sh "CN7_16" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 8.27
+$EndPAD
+$PAD
+Sh "CN7_17" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 10.81
+$EndPAD
+$PAD
+Sh "CN7_18" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 10.81
+$EndPAD
+$PAD
+Sh "CN7_19" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 13.35
+$EndPAD
+$PAD
+Sh "CN7_20" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 13.35
+$EndPAD
+$PAD
+Sh "CN7_21" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 15.89
+$EndPAD
+$PAD
+Sh "CN7_22" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 15.89
+$EndPAD
+$PAD
+Sh "CN7_23" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 18.43
+$EndPAD
+$PAD
+Sh "CN7_24" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 18.43
+$EndPAD
+$PAD
+Sh "CN7_25" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 20.97
+$EndPAD
+$PAD
+Sh "CN7_26" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 20.97
+$EndPAD
+$PAD
+Sh "CN7_27" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 23.51
+$EndPAD
+$PAD
+Sh "CN7_28" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 23.51
+$EndPAD
+$PAD
+Sh "CN7_29" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 26.05
+$EndPAD
+$PAD
+Sh "CN7_30" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 26.05
+$EndPAD
+$PAD
+Sh "CN7_31" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 28.59
+$EndPAD
+$PAD
+Sh "CN7_32" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 28.59
+$EndPAD
+$PAD
+Sh "CN7_33" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 31.13
+$EndPAD
+$PAD
+Sh "CN7_34" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 31.13
+$EndPAD
+$PAD
+Sh "CN7_35" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 33.67
+$EndPAD
+$PAD
+Sh "CN7_36" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 33.67
+$EndPAD
+$PAD
+Sh "CN7_37" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 36.21
+$EndPAD
+$PAD
+Sh "CN7_38" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -29.21 36.21
+$EndPAD
+$PAD
+Sh "CN6_2" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 3.19
+$EndPAD
+$PAD
+Sh "CN6_3" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 5.73
+$EndPAD
+$PAD
+Sh "CN6_4" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 8.27
+$EndPAD
+$PAD
+Sh "CN6_5" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 10.81
+$EndPAD
+$PAD
+Sh "CN6_6" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 13.35
+$EndPAD
+$PAD
+Sh "CN6_7" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 15.89
+$EndPAD
+$PAD
+Sh "CN6_8" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 18.43
+$EndPAD
+$PAD
+Sh "CN8_2" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 26.05
+$EndPAD
+$PAD
+Sh "CN8_3" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 28.59
+$EndPAD
+$PAD
+Sh "CN8_4" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 31.13
+$EndPAD
+$PAD
+Sh "CN8_5" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 33.67
+$EndPAD
+$PAD
+Sh "CN8_6" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -24.13 36.21
+$EndPAD
+$PAD
+Sh "CN5_2" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 11.83
+$EndPAD
+$PAD
+Sh "CN5_3" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 9.29
+$EndPAD
+$PAD
+Sh "CN5_4" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 6.75
+$EndPAD
+$PAD
+Sh "CN5_5" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 4.21
+$EndPAD
+$PAD
+Sh "CN5_6" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 1.67
+$EndPAD
+$PAD
+Sh "CN5_7" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 -0.87
+$EndPAD
+$PAD
+Sh "CN5_8" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 -3.41
+$EndPAD
+$PAD
+Sh "CN5_9" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 -5.95
+$EndPAD
+$PAD
+Sh "CN5_10" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 -8.49
+$EndPAD
+$PAD
+Sh "CN9_2" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 33.67
+$EndPAD
+$PAD
+Sh "CN9_3" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 31.13
+$EndPAD
+$PAD
+Sh "CN9_4" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 28.59
+$EndPAD
+$PAD
+Sh "CN9_5" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 26.05
+$EndPAD
+$PAD
+Sh "CN9_6" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 23.51
+$EndPAD
+$PAD
+Sh "CN9_7" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 20.97
+$EndPAD
+$PAD
+Sh "CN9_8" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 24.13 18.43
+$EndPAD
+$PAD
+Sh "CN10_5" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 -4.43
+$EndPAD
+$PAD
+Sh "CN10_6" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 -4.43
+$EndPAD
+$PAD
+Sh "CN10_7" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 -1.89
+$EndPAD
+$PAD
+Sh "CN10_8" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 -1.89
+$EndPAD
+$PAD
+Sh "CN10_9" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 0.65
+$EndPAD
+$PAD
+Sh "CN10_10" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 0.65
+$EndPAD
+$PAD
+Sh "CN10_11" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 3.19
+$EndPAD
+$PAD
+Sh "CN10_12" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 3.19
+$EndPAD
+$PAD
+Sh "CN10_13" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 5.73
+$EndPAD
+$PAD
+Sh "CN10_14" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 5.73
+$EndPAD
+$PAD
+Sh "CN10_15" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 8.27
+$EndPAD
+$PAD
+Sh "CN10_16" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 8.27
+$EndPAD
+$PAD
+Sh "CN10_17" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 10.81
+$EndPAD
+$PAD
+Sh "CN10_18" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 10.81
+$EndPAD
+$PAD
+Sh "CN10_19" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 13.35
+$EndPAD
+$PAD
+Sh "CN10_20" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 13.35
+$EndPAD
+$PAD
+Sh "CN10_21" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 15.89
+$EndPAD
+$PAD
+Sh "CN10_22" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 15.89
+$EndPAD
+$PAD
+Sh "CN10_23" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 18.43
+$EndPAD
+$PAD
+Sh "CN10_24" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 18.43
+$EndPAD
+$PAD
+Sh "CN10_25" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 20.97
+$EndPAD
+$PAD
+Sh "CN10_26" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 20.97
+$EndPAD
+$PAD
+Sh "CN10_27" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 23.51
+$EndPAD
+$PAD
+Sh "CN10_28" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 23.51
+$EndPAD
+$PAD
+Sh "CN10_29" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 26.05
+$EndPAD
+$PAD
+Sh "CN10_30" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 26.05
+$EndPAD
+$PAD
+Sh "CN10_31" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 28.59
+$EndPAD
+$PAD
+Sh "CN10_32" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 28.59
+$EndPAD
+$PAD
+Sh "CN10_33" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 31.13
+$EndPAD
+$PAD
+Sh "CN10_34" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 31.13
+$EndPAD
+$PAD
+Sh "CN10_35" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 33.67
+$EndPAD
+$PAD
+Sh "CN10_36" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 33.67
+$EndPAD
+$PAD
+Sh "CN10_37" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 29.21 36.21
+$EndPAD
+$PAD
+Sh "CN10_38" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 36.21
+$EndPAD
+$PAD
+Sh "CN12_1" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 -37.45
+$EndPAD
+$PAD
+Sh "CN12_2" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po -31.75 -34.91
+$EndPAD
+$PAD
+Sh "CN11_1" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 -37.45
+$EndPAD
+$PAD
+Sh "CN11_2" C 1.508 1.508 0 0 0
+Dr 1 0 0
+At STD N 00C0FFFF
+.SolderMask 0
+Ne 0 ""
+Po 31.75 -34.91
+$EndPAD
+$EndMODULE MODULE_NUCLEO-L053R8

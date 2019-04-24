@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name NUCLEO-L053R8)(type Legacy)(uri ${KIPRJMOD}/NUCLEO-L053R8.mod)(options "")(descr ""))
+  (lib (name nucleo-f401re)(type KiCad)(uri ${KIPRJMOD}/nucleo-f401re.pretty)(options "")(descr ""))
+  (lib (name mcu-kort-footprints)(type KiCad)(uri ${KIPRJMOD}/mcu-kort-footprints)(options "")(descr ""))
+)
