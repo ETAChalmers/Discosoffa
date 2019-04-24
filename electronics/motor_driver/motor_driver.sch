@@ -84,35 +84,24 @@ $EndComp
 $Comp
 L motor_driver-rescue:CONN_02X20-conn J101
 U 1 1 5CBBB8EA
-P 4350 4200
-F 0 "J101" H 4350 5365 50  0000 C CNN
-F 1 "CONN_02X20" H 4350 5274 50  0000 C CNN
-F 2 "Connectors_IDC:IDC-Header_2x20_Pitch2.54mm_Straight" H 4350 3250 50  0001 C CNN
-F 3 "" H 4350 3250 50  0001 C CNN
-	1    4350 4200
+P 4300 4650
+F 0 "J101" H 4300 5815 50  0000 C CNN
+F 1 "IDE PATA Connector" H 4300 5724 50  0000 C CNN
+F 2 "Connectors_IDC:IDC-Header_2x20_Pitch2.54mm_Straight" H 4300 3700 50  0001 C CNN
+F 3 "" H 4300 3700 50  0001 C CNN
+	1    4300 4650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0109
 U 1 1 5CBBB9C3
-P 4100 3250
-F 0 "#PWR0109" H 4100 3100 50  0001 C CNN
-F 1 "+5V" V 4115 3378 50  0000 L CNN
-F 2 "" H 4100 3250 50  0001 C CNN
-F 3 "" H 4100 3250 50  0001 C CNN
-	1    4100 3250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0110
-U 1 1 5CBBBA24
-P 4100 5150
-F 0 "#PWR0110" H 4100 4900 50  0001 C CNN
-F 1 "GND" V 4105 5022 50  0000 R CNN
-F 2 "" H 4100 5150 50  0001 C CNN
-F 3 "" H 4100 5150 50  0001 C CNN
-	1    4100 5150
-	0    1    1    0   
+P 3800 3650
+F 0 "#PWR0109" H 3800 3500 50  0001 C CNN
+F 1 "+5V" V 3815 3778 50  0000 L CNN
+F 2 "" H 3800 3650 50  0001 C CNN
+F 3 "" H 3800 3650 50  0001 C CNN
+	1    3800 3650
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5700 1650 5700 1550
@@ -283,109 +272,79 @@ F 3 "" H 2150 6250 50  0001 C CNN
 $EndComp
 Text Label 2150 6450 0    50   ~ 0
 VCC_2
-Wire Wire Line
-	4100 3250 4100 3350
-Connection ~ 4100 3250
-Wire Wire Line
-	4100 3350 4100 3450
-Connection ~ 4100 3350
 $Comp
 L power:+5V #PWR0111
 U 1 1 5CBF87ED
-P 4600 3250
-F 0 "#PWR0111" H 4600 3100 50  0001 C CNN
-F 1 "+5V" V 4615 3378 50  0000 L CNN
-F 2 "" H 4600 3250 50  0001 C CNN
-F 3 "" H 4600 3250 50  0001 C CNN
-	1    4600 3250
-	0    1    1    0   
+P 4800 3650
+F 0 "#PWR0111" H 4800 3500 50  0001 C CNN
+F 1 "+5V" V 4815 3778 50  0000 L CNN
+F 2 "" H 4800 3650 50  0001 C CNN
+F 3 "" H 4800 3650 50  0001 C CNN
+	1    4800 3650
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4600 3250 4600 3350
-Connection ~ 4600 3250
-Wire Wire Line
-	4600 3350 4600 3450
-Connection ~ 4600 3350
 $Comp
 L power:GND #PWR0112
 U 1 1 5CBF896C
-P 4600 5150
-F 0 "#PWR0112" H 4600 4900 50  0001 C CNN
-F 1 "GND" V 4605 5022 50  0000 R CNN
-F 2 "" H 4600 5150 50  0001 C CNN
-F 3 "" H 4600 5150 50  0001 C CNN
-	1    4600 5150
-	0    -1   -1   0   
+P 4300 5800
+F 0 "#PWR0112" H 4300 5550 50  0001 C CNN
+F 1 "GND" V 4305 5672 50  0000 R CNN
+F 2 "" H 4300 5800 50  0001 C CNN
+F 3 "" H 4300 5800 50  0001 C CNN
+	1    4300 5800
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4600 5150 4600 5050
-Connection ~ 4600 5150
-Wire Wire Line
-	4600 5050 4600 4950
-Connection ~ 4600 5050
-Wire Wire Line
-	4100 4950 4100 5050
-Wire Wire Line
-	4100 5050 4100 5150
-Connection ~ 4100 5050
-Connection ~ 4100 5150
-Text Label 4100 3650 2    50   ~ 0
+Text Label 4050 4100 2    50   ~ 0
 RPWM_1
-Text Label 4100 3750 2    50   ~ 0
+Text Label 4050 4200 2    50   ~ 0
 LPWM_1
-Text Label 4100 3850 2    50   ~ 0
+Text Label 4050 4300 2    50   ~ 0
 R_EN_1
-Text Label 4100 3950 2    50   ~ 0
+Text Label 4050 4400 2    50   ~ 0
 L_EN_1
-Text Label 4100 4050 2    50   ~ 0
+Text Label 4050 4500 2    50   ~ 0
 R_IS_1
-Text Label 4100 4150 2    50   ~ 0
+Text Label 4050 4600 2    50   ~ 0
 L_IS_1
-Text Label 4100 4250 2    50   ~ 0
+Text Label 4050 4700 2    50   ~ 0
 RPWM_2
-Text Label 4100 4350 2    50   ~ 0
+Text Label 4050 4800 2    50   ~ 0
 LPWM_2
-Text Label 4100 4450 2    50   ~ 0
+Text Label 4050 4900 2    50   ~ 0
 R_EN_2
-Text Label 4100 4550 2    50   ~ 0
+Text Label 4050 5000 2    50   ~ 0
 L_EN_2
-Text Label 4100 4650 2    50   ~ 0
+Text Label 4050 5100 2    50   ~ 0
 R_IS_2
-Text Label 4100 4750 2    50   ~ 0
+Text Label 4050 5200 2    50   ~ 0
 L_IS_2
-Wire Wire Line
-	4100 4950 4100 4850
-Connection ~ 4100 4950
-Wire Wire Line
-	4600 4950 4600 4850
-Connection ~ 4600 4950
-Text Label 4600 3650 0    50   ~ 0
+Text Label 4550 4600 0    50   ~ 0
 RPWM_3
-Text Label 4600 3750 0    50   ~ 0
+Text Label 4550 4500 0    50   ~ 0
 LPWM_3
-Text Label 4600 3850 0    50   ~ 0
+Text Label 4550 4400 0    50   ~ 0
 R_EN_3
-Text Label 4600 3950 0    50   ~ 0
+Text Label 4550 4300 0    50   ~ 0
 L_EN_3
-Text Label 4600 4050 0    50   ~ 0
+Text Label 4550 4200 0    50   ~ 0
 R_IS_3
-Text Label 4600 4150 0    50   ~ 0
+Text Label 4550 4100 0    50   ~ 0
 L_IS_3
-Text Label 4600 4250 0    50   ~ 0
+Text Label 4550 5200 0    50   ~ 0
 RPWM_4
-Text Label 4600 4350 0    50   ~ 0
+Text Label 4550 5100 0    50   ~ 0
 LPWM_4
-Text Label 4600 4450 0    50   ~ 0
+Text Label 4550 5000 0    50   ~ 0
 R_EN_4
-Text Label 4600 4550 0    50   ~ 0
+Text Label 4550 4900 0    50   ~ 0
 L_EN_4
-Text Label 4600 4650 0    50   ~ 0
+Text Label 4550 4800 0    50   ~ 0
 R_IS_4
-Text Label 4600 4750 0    50   ~ 0
+Text Label 4550 4700 0    50   ~ 0
 L_IS_4
-Text Label 4100 3550 2    50   ~ 0
+Text Label 4050 4000 2    50   ~ 0
 BAT+
-Text Label 4600 3550 0    50   ~ 0
+Text Label 4550 4000 0    50   ~ 0
 BAT+
 Text Label 2150 950  0    50   ~ 0
 R_IS_1
@@ -534,4 +493,81 @@ F 3 "" H 4200 2750 50  0001 C CNN
 	1    4200 2750
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	4050 3900 3950 3900
+Wire Wire Line
+	3950 3900 3950 3800
+Wire Wire Line
+	3950 3800 4050 3800
+Wire Wire Line
+	3950 3800 3950 3700
+Wire Wire Line
+	3950 3700 4050 3700
+Connection ~ 3950 3800
+Wire Wire Line
+	3800 3650 3800 3700
+Wire Wire Line
+	3800 3700 3950 3700
+Connection ~ 3950 3700
+Wire Wire Line
+	4550 3700 4650 3700
+Wire Wire Line
+	4650 3700 4650 3800
+Wire Wire Line
+	4650 3800 4550 3800
+Wire Wire Line
+	4550 3900 4650 3900
+Wire Wire Line
+	4650 3900 4650 3800
+Connection ~ 4650 3800
+Wire Wire Line
+	4650 3700 4800 3700
+Wire Wire Line
+	4800 3700 4800 3650
+Connection ~ 4650 3700
+Wire Wire Line
+	4050 5300 3950 5300
+Wire Wire Line
+	3950 5300 3950 5400
+Wire Wire Line
+	3950 5750 4300 5750
+Wire Wire Line
+	4300 5750 4300 5800
+Wire Wire Line
+	4550 5300 4650 5300
+Wire Wire Line
+	4650 5300 4650 5400
+Wire Wire Line
+	4650 5750 4300 5750
+Connection ~ 4300 5750
+Wire Wire Line
+	4550 5600 4650 5600
+Connection ~ 4650 5600
+Wire Wire Line
+	4650 5600 4650 5750
+Wire Wire Line
+	4650 5500 4550 5500
+Connection ~ 4650 5500
+Wire Wire Line
+	4650 5500 4650 5600
+Wire Wire Line
+	4550 5400 4650 5400
+Connection ~ 4650 5400
+Wire Wire Line
+	4650 5400 4650 5500
+Wire Wire Line
+	4050 5400 3950 5400
+Connection ~ 3950 5400
+Wire Wire Line
+	3950 5400 3950 5500
+Wire Wire Line
+	3950 5500 4050 5500
+Connection ~ 3950 5500
+Wire Wire Line
+	3950 5500 3950 5600
+Wire Wire Line
+	4050 5600 3950 5600
+Connection ~ 3950 5600
+Wire Wire Line
+	3950 5600 3950 5750
 $EndSCHEMATC
