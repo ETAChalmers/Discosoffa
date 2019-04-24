@@ -1,0 +1,537 @@
+EESchema Schematic File Version 4
+LIBS:motor_driver-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 650  750  1500 1450
+U 5CBAC76C
+F0 "MotorDriver1" 50
+F1 "single_motor_dirver.sch" 50
+F2 "CW_IN" I R 2150 850 50 
+F3 "I_SENSE" O R 2150 950 50 
+F4 "GND" I R 2150 1050 50 
+F5 "VCC" I R 2150 1150 50 
+F6 "VCC_2" I R 2150 1350 50 
+F7 "CCW_IN" I R 2150 1250 50 
+$EndSheet
+$Comp
+L power:GND #PWR0101
+U 1 1 5CBB7B6B
+P 2150 1050
+F 0 "#PWR0101" H 2150 800 50  0001 C CNN
+F 1 "GND" V 2155 922 50  0000 R CNN
+F 2 "" H 2150 1050 50  0001 C CNN
+F 3 "" H 2150 1050 50  0001 C CNN
+	1    2150 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5CBB7BA2
+P 2150 1150
+F 0 "#PWR0102" H 2150 1000 50  0001 C CNN
+F 1 "VCC" V 2167 1278 50  0000 L CNN
+F 2 "" H 2150 1150 50  0001 C CNN
+F 3 "" H 2150 1150 50  0001 C CNN
+	1    2150 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L motor_driver-rescue:CONN_01X02-conn J102
+U 1 1 5CBBB780
+P 5900 1700
+F 0 "J102" H 5978 1741 50  0000 L CNN
+F 1 "CONN_01X02" H 5978 1650 50  0000 L CNN
+F 2 "footprints:TerminalBlock-XXL" H 5900 1700 50  0001 C CNN
+F 3 "" H 5900 1700 50  0001 C CNN
+	1    5900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5CBBB7EF
+P 5200 1850
+F 0 "#PWR0114" H 5200 1600 50  0001 C CNN
+F 1 "GND" V 5205 1722 50  0000 R CNN
+F 2 "" H 5200 1850 50  0001 C CNN
+F 3 "" H 5200 1850 50  0001 C CNN
+	1    5200 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR0113
+U 1 1 5CBBB7F5
+P 5200 1550
+F 0 "#PWR0113" H 5200 1400 50  0001 C CNN
+F 1 "VCC" V 5217 1678 50  0000 L CNN
+F 2 "" H 5200 1550 50  0001 C CNN
+F 3 "" H 5200 1550 50  0001 C CNN
+	1    5200 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L motor_driver-rescue:CONN_02X20-conn J101
+U 1 1 5CBBB8EA
+P 4350 4200
+F 0 "J101" H 4350 5365 50  0000 C CNN
+F 1 "CONN_02X20" H 4350 5274 50  0000 C CNN
+F 2 "Connectors_IDC:IDC-Header_2x20_Pitch2.54mm_Straight" H 4350 3250 50  0001 C CNN
+F 3 "" H 4350 3250 50  0001 C CNN
+	1    4350 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0109
+U 1 1 5CBBB9C3
+P 4100 3250
+F 0 "#PWR0109" H 4100 3100 50  0001 C CNN
+F 1 "+5V" V 4115 3378 50  0000 L CNN
+F 2 "" H 4100 3250 50  0001 C CNN
+F 3 "" H 4100 3250 50  0001 C CNN
+	1    4100 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5CBBBA24
+P 4100 5150
+F 0 "#PWR0110" H 4100 4900 50  0001 C CNN
+F 1 "GND" V 4105 5022 50  0000 R CNN
+F 2 "" H 4100 5150 50  0001 C CNN
+F 3 "" H 4100 5150 50  0001 C CNN
+	1    4100 5150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5700 1650 5700 1550
+Wire Wire Line
+	5700 1550 5400 1550
+Wire Wire Line
+	5200 1850 5400 1850
+Wire Wire Line
+	5700 1850 5700 1750
+$Comp
+L motor_driver-rescue:CP-device C101
+U 1 1 5CBCFF78
+P 5400 1700
+F 0 "C101" H 5518 1746 50  0000 L CNN
+F 1 "220m" H 5518 1655 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn" H 5438 1550 50  0001 C CNN
+F 3 "~" H 5400 1700 50  0001 C CNN
+	1    5400 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 5400 1550
+Wire Wire Line
+	5400 1550 5200 1550
+Connection ~ 5400 1850
+Wire Wire Line
+	5400 1850 5700 1850
+$Sheet
+S 7650 1250 1550 1350
+U 5CBED205
+F0 "Chargepump" 50
+F1 "chargepump.sch" 50
+F2 "VCC" I L 7650 1350 50 
+F3 "GND" I L 7650 1450 50 
+F4 "VOUT" O L 7650 1550 50 
+F5 "5V" I L 7650 1650 50 
+$EndSheet
+$Comp
+L power:GND #PWR0116
+U 1 1 5CBED273
+P 7650 1450
+F 0 "#PWR0116" H 7650 1200 50  0001 C CNN
+F 1 "GND" V 7655 1322 50  0000 R CNN
+F 2 "" H 7650 1450 50  0001 C CNN
+F 3 "" H 7650 1450 50  0001 C CNN
+	1    7650 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR0115
+U 1 1 5CBED279
+P 7650 1350
+F 0 "#PWR0115" H 7650 1200 50  0001 C CNN
+F 1 "VCC" V 7667 1478 50  0000 L CNN
+F 2 "" H 7650 1350 50  0001 C CNN
+F 3 "" H 7650 1350 50  0001 C CNN
+	1    7650 1350
+	0    -1   -1   0   
+$EndComp
+Text Label 7650 1550 2    50   ~ 0
+VCC_2
+Text Label 2150 1350 0    50   ~ 0
+VCC_2
+$Sheet
+S 650  2450 1500 1450
+U 5CBF6696
+F0 "MotorDriver2" 50
+F1 "single_motor_dirver.sch" 50
+F2 "CW_IN" I R 2150 2550 50 
+F3 "I_SENSE" O R 2150 2650 50 
+F4 "GND" I R 2150 2750 50 
+F5 "VCC" I R 2150 2850 50 
+F6 "VCC_2" I R 2150 3050 50 
+F7 "CCW_IN" I R 2150 2950 50 
+$EndSheet
+$Comp
+L power:GND #PWR0103
+U 1 1 5CBF669C
+P 2150 2750
+F 0 "#PWR0103" H 2150 2500 50  0001 C CNN
+F 1 "GND" V 2155 2622 50  0000 R CNN
+F 2 "" H 2150 2750 50  0001 C CNN
+F 3 "" H 2150 2750 50  0001 C CNN
+	1    2150 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 5CBF66A2
+P 2150 2850
+F 0 "#PWR0104" H 2150 2700 50  0001 C CNN
+F 1 "VCC" V 2167 2978 50  0000 L CNN
+F 2 "" H 2150 2850 50  0001 C CNN
+F 3 "" H 2150 2850 50  0001 C CNN
+	1    2150 2850
+	0    1    1    0   
+$EndComp
+Text Label 2150 3050 0    50   ~ 0
+VCC_2
+$Sheet
+S 650  4150 1500 1450
+U 5CBF6A92
+F0 "MotorDriver3" 50
+F1 "single_motor_dirver.sch" 50
+F2 "CW_IN" I R 2150 4250 50 
+F3 "I_SENSE" O R 2150 4350 50 
+F4 "GND" I R 2150 4450 50 
+F5 "VCC" I R 2150 4550 50 
+F6 "VCC_2" I R 2150 4750 50 
+F7 "CCW_IN" I R 2150 4650 50 
+$EndSheet
+$Comp
+L power:GND #PWR0105
+U 1 1 5CBF6A98
+P 2150 4450
+F 0 "#PWR0105" H 2150 4200 50  0001 C CNN
+F 1 "GND" V 2155 4322 50  0000 R CNN
+F 2 "" H 2150 4450 50  0001 C CNN
+F 3 "" H 2150 4450 50  0001 C CNN
+	1    2150 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0106
+U 1 1 5CBF6A9E
+P 2150 4550
+F 0 "#PWR0106" H 2150 4400 50  0001 C CNN
+F 1 "VCC" V 2167 4678 50  0000 L CNN
+F 2 "" H 2150 4550 50  0001 C CNN
+F 3 "" H 2150 4550 50  0001 C CNN
+	1    2150 4550
+	0    1    1    0   
+$EndComp
+Text Label 2150 4750 0    50   ~ 0
+VCC_2
+$Sheet
+S 650  5850 1500 1450
+U 5CBF6AAA
+F0 "MotorDrvier4" 50
+F1 "single_motor_dirver.sch" 50
+F2 "CW_IN" I R 2150 5950 50 
+F3 "I_SENSE" O R 2150 6050 50 
+F4 "GND" I R 2150 6150 50 
+F5 "VCC" I R 2150 6250 50 
+F6 "VCC_2" I R 2150 6450 50 
+F7 "CCW_IN" I R 2150 6350 50 
+$EndSheet
+$Comp
+L power:GND #PWR0107
+U 1 1 5CBF6AB0
+P 2150 6150
+F 0 "#PWR0107" H 2150 5900 50  0001 C CNN
+F 1 "GND" V 2155 6022 50  0000 R CNN
+F 2 "" H 2150 6150 50  0001 C CNN
+F 3 "" H 2150 6150 50  0001 C CNN
+	1    2150 6150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0108
+U 1 1 5CBF6AB6
+P 2150 6250
+F 0 "#PWR0108" H 2150 6100 50  0001 C CNN
+F 1 "VCC" V 2167 6378 50  0000 L CNN
+F 2 "" H 2150 6250 50  0001 C CNN
+F 3 "" H 2150 6250 50  0001 C CNN
+	1    2150 6250
+	0    1    1    0   
+$EndComp
+Text Label 2150 6450 0    50   ~ 0
+VCC_2
+Wire Wire Line
+	4100 3250 4100 3350
+Connection ~ 4100 3250
+Wire Wire Line
+	4100 3350 4100 3450
+Connection ~ 4100 3350
+$Comp
+L power:+5V #PWR0111
+U 1 1 5CBF87ED
+P 4600 3250
+F 0 "#PWR0111" H 4600 3100 50  0001 C CNN
+F 1 "+5V" V 4615 3378 50  0000 L CNN
+F 2 "" H 4600 3250 50  0001 C CNN
+F 3 "" H 4600 3250 50  0001 C CNN
+	1    4600 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 3250 4600 3350
+Connection ~ 4600 3250
+Wire Wire Line
+	4600 3350 4600 3450
+Connection ~ 4600 3350
+$Comp
+L power:GND #PWR0112
+U 1 1 5CBF896C
+P 4600 5150
+F 0 "#PWR0112" H 4600 4900 50  0001 C CNN
+F 1 "GND" V 4605 5022 50  0000 R CNN
+F 2 "" H 4600 5150 50  0001 C CNN
+F 3 "" H 4600 5150 50  0001 C CNN
+	1    4600 5150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 5150 4600 5050
+Connection ~ 4600 5150
+Wire Wire Line
+	4600 5050 4600 4950
+Connection ~ 4600 5050
+Wire Wire Line
+	4100 4950 4100 5050
+Wire Wire Line
+	4100 5050 4100 5150
+Connection ~ 4100 5050
+Connection ~ 4100 5150
+Text Label 4100 3650 2    50   ~ 0
+RPWM_1
+Text Label 4100 3750 2    50   ~ 0
+LPWM_1
+Text Label 4100 3850 2    50   ~ 0
+R_EN_1
+Text Label 4100 3950 2    50   ~ 0
+L_EN_1
+Text Label 4100 4050 2    50   ~ 0
+R_IS_1
+Text Label 4100 4150 2    50   ~ 0
+L_IS_1
+Text Label 4100 4250 2    50   ~ 0
+RPWM_2
+Text Label 4100 4350 2    50   ~ 0
+LPWM_2
+Text Label 4100 4450 2    50   ~ 0
+R_EN_2
+Text Label 4100 4550 2    50   ~ 0
+L_EN_2
+Text Label 4100 4650 2    50   ~ 0
+R_IS_2
+Text Label 4100 4750 2    50   ~ 0
+L_IS_2
+Wire Wire Line
+	4100 4950 4100 4850
+Connection ~ 4100 4950
+Wire Wire Line
+	4600 4950 4600 4850
+Connection ~ 4600 4950
+Text Label 4600 3650 0    50   ~ 0
+RPWM_3
+Text Label 4600 3750 0    50   ~ 0
+LPWM_3
+Text Label 4600 3850 0    50   ~ 0
+R_EN_3
+Text Label 4600 3950 0    50   ~ 0
+L_EN_3
+Text Label 4600 4050 0    50   ~ 0
+R_IS_3
+Text Label 4600 4150 0    50   ~ 0
+L_IS_3
+Text Label 4600 4250 0    50   ~ 0
+RPWM_4
+Text Label 4600 4350 0    50   ~ 0
+LPWM_4
+Text Label 4600 4450 0    50   ~ 0
+R_EN_4
+Text Label 4600 4550 0    50   ~ 0
+L_EN_4
+Text Label 4600 4650 0    50   ~ 0
+R_IS_4
+Text Label 4600 4750 0    50   ~ 0
+L_IS_4
+Text Label 4100 3550 2    50   ~ 0
+BAT+
+Text Label 4600 3550 0    50   ~ 0
+BAT+
+Text Label 2150 950  0    50   ~ 0
+R_IS_1
+Text Label 2150 2650 0    50   ~ 0
+R_IS_2
+Text Label 2150 4350 0    50   ~ 0
+R_IS_3
+Text Label 2150 6050 0    50   ~ 0
+R_IS_4
+Text Label 2150 850  0    50   ~ 0
+RPWM_1
+Text Label 2150 1250 0    50   ~ 0
+LPWM_1
+Text Label 2150 2550 0    50   ~ 0
+RPWM_2
+Text Label 2150 2950 0    50   ~ 0
+LPWM_2
+Text Label 2150 4250 0    50   ~ 0
+RPWM_3
+Text Label 2150 4650 0    50   ~ 0
+LPWM_3
+Text Label 2150 5950 0    50   ~ 0
+RPWM_4
+Text Label 2150 6350 0    50   ~ 0
+LPWM_4
+$Comp
+L power:+5V #PWR0117
+U 1 1 5CC51FA9
+P 7650 1650
+F 0 "#PWR0117" H 7650 1500 50  0001 C CNN
+F 1 "+5V" V 7665 1778 50  0000 L CNN
+F 2 "" H 7650 1650 50  0001 C CNN
+F 3 "" H 7650 1650 50  0001 C CNN
+	1    7650 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L motor_driver-rescue:CONN_01X02-conn J103
+U 1 1 5CC52AC9
+P 5900 2150
+F 0 "J103" H 5978 2191 50  0000 L CNN
+F 1 "CONN_01X02" H 5978 2100 50  0000 L CNN
+F 2 "footprints:TerminalBlock-XXL" H 5900 2150 50  0001 C CNN
+F 3 "" H 5900 2150 50  0001 C CNN
+	1    5900 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 5CC52ACF
+P 5200 2300
+F 0 "#PWR0118" H 5200 2050 50  0001 C CNN
+F 1 "GND" V 5205 2172 50  0000 R CNN
+F 2 "" H 5200 2300 50  0001 C CNN
+F 3 "" H 5200 2300 50  0001 C CNN
+	1    5200 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR0119
+U 1 1 5CC52AD5
+P 5200 2000
+F 0 "#PWR0119" H 5200 1850 50  0001 C CNN
+F 1 "VCC" V 5217 2128 50  0000 L CNN
+F 2 "" H 5200 2000 50  0001 C CNN
+F 3 "" H 5200 2000 50  0001 C CNN
+	1    5200 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5700 2100 5700 2000
+Wire Wire Line
+	5700 2000 5400 2000
+Wire Wire Line
+	5200 2300 5400 2300
+Wire Wire Line
+	5700 2300 5700 2200
+$Comp
+L motor_driver-rescue:CP-device C102
+U 1 1 5CC52ADF
+P 5400 2150
+F 0 "C102" H 5518 2196 50  0000 L CNN
+F 1 "220m" H 5518 2105 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn" H 5438 2000 50  0001 C CNN
+F 3 "~" H 5400 2150 50  0001 C CNN
+	1    5400 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 5400 2000
+Wire Wire Line
+	5400 2000 5200 2000
+Connection ~ 5400 2300
+Wire Wire Line
+	5400 2300 5700 2300
+$Comp
+L motor_driver-rescue:CONN_01X02-conn J104
+U 1 1 5CC52F35
+P 5900 2600
+F 0 "J104" H 5818 2325 50  0000 C CNN
+F 1 "CONN_01X02" H 5818 2416 50  0000 C CNN
+F 2 "footprints:TerminalBlock-XXL" H 5900 2600 50  0001 C CNN
+F 3 "" H 5900 2600 50  0001 C CNN
+	1    5900 2600
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 5CC52F3B
+P 5200 2750
+F 0 "#PWR0120" H 5200 2500 50  0001 C CNN
+F 1 "GND" V 5205 2622 50  0000 R CNN
+F 2 "" H 5200 2750 50  0001 C CNN
+F 3 "" H 5200 2750 50  0001 C CNN
+	1    5200 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR0121
+U 1 1 5CC52F41
+P 5200 2450
+F 0 "#PWR0121" H 5200 2300 50  0001 C CNN
+F 1 "VCC" V 5217 2578 50  0000 L CNN
+F 2 "" H 5200 2450 50  0001 C CNN
+F 3 "" H 5200 2450 50  0001 C CNN
+	1    5200 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5700 2550 5700 2450
+Wire Wire Line
+	5700 2750 5700 2650
+Wire Wire Line
+	5200 2450 5700 2450
+Wire Wire Line
+	5200 2750 5700 2750
+Text Label 4200 2750 2    50   ~ 0
+BAT+
+$Comp
+L power:VCC #PWR0122
+U 1 1 5CC5623F
+P 4200 2750
+F 0 "#PWR0122" H 4200 2600 50  0001 C CNN
+F 1 "VCC" V 4217 2878 50  0000 L CNN
+F 2 "" H 4200 2750 50  0001 C CNN
+F 3 "" H 4200 2750 50  0001 C CNN
+	1    4200 2750
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
