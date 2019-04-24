@@ -3,11 +3,12 @@ Repo för allt vad gäller den fabulösa Discosoffan!
 
 # Index
 [Modular BMS](#Modular-BMS)
+
 [MCU-kort](#MCU-kort)
 
 # Modular BMS
 Det BMS (Battery Management System) vilket används på soffan är Jonathan Locks egendesignade Modular BMS-projekt. 
-PCB-design, kod samt dokumentation för dessa finns att tillgå från hans ![GitLab repository](https://gitlab.com/lerneaen_hydra/rabidmantis/tree/master/modular_bms).
+PCB-design, kod samt dokumentation för dessa finns att tillgå från hans [GitLab repository](https://gitlab.com/lerneaen_hydra/rabidmantis/tree/master/modular_bms).
 
 Discosoffans batteripack är på 5-celler seriellt (5S). För detta behövs en modul per cell, varav en är master.
 
