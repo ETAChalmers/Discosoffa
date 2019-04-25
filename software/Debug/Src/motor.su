@@ -1,0 +1,3 @@
+motor.c:27:6:MOTOR_SetChannelDuty	0	static
+motor.c:3:6:HAL_MOTOR_Init	8	static
+motor.c:11:6:HAL_MOTOR_write	16	static

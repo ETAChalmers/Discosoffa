@@ -1,0 +1,3 @@
+nunchuck.c:3:6:HAL_NUNCHUCK_ReadRaw	40	static
+nunchuck.c:43:6:HAL_NUNCHUCK_Read	8	static
+nunchuck.c:51:6:HAL_NUNCHUCK_Calibrate	8	static
