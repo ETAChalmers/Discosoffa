@@ -64,12 +64,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define L_EN_4_Pin GPIO_PIN_13
-#define L_EN_4_GPIO_Port GPIOC
 #define L_IS_4_Pin GPIO_PIN_0
 #define L_IS_4_GPIO_Port GPIOC
-#define R_IS_4_Pin GPIO_PIN_1
-#define R_IS_4_GPIO_Port GPIOC
+#define R_IS_1_Pin GPIO_PIN_1
+#define R_IS_1_GPIO_Port GPIOC
 #define L_IS_3_Pin GPIO_PIN_2
 #define L_IS_3_GPIO_Port GPIOC
 #define R_IS_3_Pin GPIO_PIN_3
@@ -84,42 +82,44 @@ void Error_Handler(void);
 #define DEVICE_DETECT_GPIO_Port GPIOA
 #define B_READ_Pin GPIO_PIN_7
 #define B_READ_GPIO_Port GPIOA
-#define R_IS_2_Pin GPIO_PIN_4
-#define R_IS_2_GPIO_Port GPIOC
-#define L_IS_2_Pin GPIO_PIN_5
+#define L_IS_2_Pin GPIO_PIN_4
 #define L_IS_2_GPIO_Port GPIOC
-#define R_IS_1_Pin GPIO_PIN_0
-#define R_IS_1_GPIO_Port GPIOB
-#define L_IS_1_Pin GPIO_PIN_1
-#define L_IS_1_GPIO_Port GPIOB
+#define L_IS_1_Pin GPIO_PIN_5
+#define L_IS_1_GPIO_Port GPIOC
+#define R_IS_4_Pin GPIO_PIN_0
+#define R_IS_4_GPIO_Port GPIOB
+#define R_IS_2_Pin GPIO_PIN_1
+#define R_IS_2_GPIO_Port GPIOB
 #define PIEZO_Pin GPIO_PIN_10
 #define PIEZO_GPIO_Port GPIOB
-#define RPWM_3_Pin GPIO_PIN_6
-#define RPWM_3_GPIO_Port GPIOC
-#define LPWM_3_Pin GPIO_PIN_7
-#define LPWM_3_GPIO_Port GPIOC
-#define RPWM_4_Pin GPIO_PIN_8
+#define LPWM_2_Pin GPIO_PIN_6
+#define LPWM_2_GPIO_Port GPIOC
+#define RPWM_4_Pin GPIO_PIN_7
 #define RPWM_4_GPIO_Port GPIOC
-#define LPWM_4_Pin GPIO_PIN_9
-#define LPWM_4_GPIO_Port GPIOC
-#define R_EN_2_Pin GPIO_PIN_11
-#define R_EN_2_GPIO_Port GPIOA
-#define L_EN_2_Pin GPIO_PIN_12
+#define RPWM_2_Pin GPIO_PIN_8
+#define RPWM_2_GPIO_Port GPIOC
+#define RPWM_1_Pin GPIO_PIN_9
+#define RPWM_1_GPIO_Port GPIOC
+#define L_EN_2_Pin GPIO_PIN_11
 #define L_EN_2_GPIO_Port GPIOA
-#define R_EN_3_Pin GPIO_PIN_10
+#define R_EN_2_Pin GPIO_PIN_12
+#define R_EN_2_GPIO_Port GPIOA
+#define L_EN_4_Pin GPIO_PIN_10
+#define L_EN_4_GPIO_Port GPIOC
+#define R_EN_3_Pin GPIO_PIN_11
 #define R_EN_3_GPIO_Port GPIOC
-#define L_EN_3_Pin GPIO_PIN_11
-#define L_EN_3_GPIO_Port GPIOC
 #define R_EN_4_Pin GPIO_PIN_12
 #define R_EN_4_GPIO_Port GPIOC
-#define RPWM_1_Pin GPIO_PIN_6
-#define RPWM_1_GPIO_Port GPIOB
+#define L_EN_3_Pin GPIO_PIN_2
+#define L_EN_3_GPIO_Port GPIOD
+#define LPWM_4_Pin GPIO_PIN_6
+#define LPWM_4_GPIO_Port GPIOB
 #define LPWM_1_Pin GPIO_PIN_7
 #define LPWM_1_GPIO_Port GPIOB
-#define RPWM_2_Pin GPIO_PIN_8
-#define RPWM_2_GPIO_Port GPIOB
-#define LPWM_2_Pin GPIO_PIN_9
-#define LPWM_2_GPIO_Port GPIOB
+#define LPWM_3_Pin GPIO_PIN_8
+#define LPWM_3_GPIO_Port GPIOB
+#define RPWM_3_Pin GPIO_PIN_9
+#define RPWM_3_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
