@@ -84,19 +84,19 @@ F 3 "" H 12600 2800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	12600 2750 12600 2800
-Text Label 12600 1800 0    50   ~ 0
+Text Label 12600 1800 0    50   ~ 6
 RPWM_1
 Wire Wire Line
 	12600 1800 13250 1800
-Text Label 12600 1900 0    50   ~ 0
+Text Label 12600 1900 0    50   ~ 6
 LPWM_1
 Wire Wire Line
 	12600 1900 13250 1900
-Text Label 12600 2000 0    50   ~ 0
+Text Label 12600 2000 0    50   ~ 6
 R_EN_1
-Text Label 12600 2100 0    50   ~ 0
+Text Label 12600 2100 0    50   ~ 6
 L_EN_1
-Text Label 11100 1550 0    50   ~ 0
+Text Label 11100 1550 0    50   ~ 6
 R_IS_1
 Wire Wire Line
 	12600 2100 13250 2100
@@ -108,7 +108,7 @@ U 1 1 5CBCE71F
 P 13700 4200
 F 0 "U2" H 13350 4650 50  0000 L CNN
 F 1 "motor_driver" H 13350 3700 50  0000 L CNN
-F 2 "styrenhet:motor-driver" H 13350 4150 50  0001 C CNN
+F 2 "styrenhet-footprints:motor-driver" H 13350 4150 50  0001 C CNN
 F 3 "" H 13350 4150 50  0001 C CNN
 	1    13700 4200
 	1    0    0    -1  
@@ -172,21 +172,21 @@ F 3 "" H 12600 4850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	12600 4800 12600 4850
-Text Label 12600 3850 0    50   ~ 0
+Text Label 12600 3850 0    50   ~ 6
 RPWM_2
 Wire Wire Line
 	12600 3850 13250 3850
-Text Label 12600 3950 0    50   ~ 0
+Text Label 12600 3950 0    50   ~ 6
 LPWM_2
 Wire Wire Line
 	12600 3950 13250 3950
-Text Label 12600 4050 0    50   ~ 0
+Text Label 12600 4050 0    50   ~ 6
 R_EN_2
-Text Label 12600 4150 0    50   ~ 0
+Text Label 12600 4150 0    50   ~ 6
 L_EN_2
-Text Label 11100 3600 0    50   ~ 0
+Text Label 11100 3600 0    50   ~ 6
 R_IS_2
-Text Label 11100 4600 0    50   ~ 0
+Text Label 11100 4600 0    50   ~ 6
 L_IS_2
 Wire Wire Line
 	12600 4150 13250 4150
@@ -226,21 +226,21 @@ Wire Wire Line
 	12600 6550 12600 6500
 Wire Wire Line
 	12600 6850 12600 6900
-Text Label 12600 5900 0    50   ~ 0
+Text Label 12600 5900 0    50   ~ 6
 RPWM_3
 Wire Wire Line
 	12600 5900 13250 5900
-Text Label 12600 6000 0    50   ~ 0
+Text Label 12600 6000 0    50   ~ 6
 LPWM_3
 Wire Wire Line
 	12600 6000 13250 6000
-Text Label 12600 6100 0    50   ~ 0
+Text Label 12600 6100 0    50   ~ 6
 R_EN_3
-Text Label 12600 6200 0    50   ~ 0
+Text Label 12600 6200 0    50   ~ 6
 L_EN_3
-Text Label 11100 5650 0    50   ~ 0
+Text Label 11100 5650 0    50   ~ 6
 R_IS_3
-Text Label 11100 6650 0    50   ~ 0
+Text Label 11100 6650 0    50   ~ 6
 L_IS_3
 Wire Wire Line
 	12600 6200 13250 6200
@@ -252,7 +252,7 @@ U 1 1 5CBD4BE1
 P 13700 8350
 F 0 "U4" H 13350 8800 50  0000 L CNN
 F 1 "motor_driver" H 13300 7850 50  0000 L CNN
-F 2 "styrenhet:motor-driver" H 13350 8300 50  0001 C CNN
+F 2 "styrenhet-footprints:motor-driver" H 13350 8300 50  0001 C CNN
 F 3 "" H 13350 8300 50  0001 C CNN
 	1    13700 8350
 	1    0    0    -1  
@@ -316,21 +316,21 @@ F 3 "" H 12600 9000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	12600 8950 12600 9000
-Text Label 12600 8000 0    50   ~ 0
+Text Label 12600 8000 0    50   ~ 6
 RPWM_4
 Wire Wire Line
 	12600 8000 13250 8000
-Text Label 12600 8100 0    50   ~ 0
+Text Label 12600 8100 0    50   ~ 6
 LPWM_4
 Wire Wire Line
 	12600 8100 13250 8100
-Text Label 12600 8200 0    50   ~ 0
+Text Label 12600 8200 0    50   ~ 6
 R_EN_4
-Text Label 12600 8300 0    50   ~ 0
+Text Label 12600 8300 0    50   ~ 6
 L_EN_4
-Text Label 11100 7650 0    50   ~ 0
+Text Label 11100 7650 0    50   ~ 6
 R_IS_4
-Text Label 11100 8650 0    50   ~ 0
+Text Label 11100 8650 0    50   ~ 6
 L_IS_4
 Wire Wire Line
 	12600 8300 13250 8300
@@ -383,7 +383,7 @@ F 3 "~" H 2550 1300 50  0001 C CNN
 	1    2550 1300
 	0    1    1    0   
 $EndComp
-Text Label 2250 2450 1    50   ~ 0
+Text Label 2250 2450 1    50   ~ 6
 BAT_+
 Wire Wire Line
 	2550 1650 2550 1500
@@ -484,21 +484,21 @@ Wire Wire Line
 Connection ~ 2600 10050
 Wire Wire Line
 	2600 10050 2600 10250
-Text Label 3900 9050 2    50   ~ 0
+Text Label 3900 9050 2    50   ~ 6
 RPWM_3
 Wire Wire Line
 	3900 9050 3250 9050
-Text Label 3900 8950 2    50   ~ 0
+Text Label 3900 8950 2    50   ~ 6
 LPWM_3
 Wire Wire Line
 	3900 8950 3250 8950
-Text Label 3900 8850 2    50   ~ 0
+Text Label 3900 8850 2    50   ~ 6
 R_EN_3
-Text Label 3900 8750 2    50   ~ 0
+Text Label 3900 8750 2    50   ~ 6
 L_EN_3
-Text Label 3900 8650 2    50   ~ 0
+Text Label 3900 8650 2    50   ~ 6
 R_IS_3
-Text Label 3900 8550 2    50   ~ 0
+Text Label 3900 8550 2    50   ~ 6
 L_IS_3
 Wire Wire Line
 	3900 8550 3250 8550
@@ -508,21 +508,21 @@ Wire Wire Line
 	3900 8750 3250 8750
 Wire Wire Line
 	3250 8850 3900 8850
-Text Label 2100 8550 0    50   ~ 0
+Text Label 2100 8550 0    50   ~ 6
 RPWM_1
 Wire Wire Line
 	2100 8550 2750 8550
-Text Label 2100 8650 0    50   ~ 0
+Text Label 2100 8650 0    50   ~ 6
 LPWM_1
 Wire Wire Line
 	2100 8650 2750 8650
-Text Label 2100 8750 0    50   ~ 0
+Text Label 2100 8750 0    50   ~ 6
 R_EN_1
-Text Label 2100 8850 0    50   ~ 0
+Text Label 2100 8850 0    50   ~ 6
 L_EN_1
-Text Label 2100 8950 0    50   ~ 0
+Text Label 2100 8950 0    50   ~ 6
 R_IS_1
-Text Label 2100 9050 0    50   ~ 0
+Text Label 2100 9050 0    50   ~ 6
 L_IS_1
 Wire Wire Line
 	2100 9050 2750 9050
@@ -532,29 +532,29 @@ Wire Wire Line
 	2100 8850 2750 8850
 Wire Wire Line
 	2750 8750 2100 8750
-Text Label 2000 9150 0    50   ~ 0
+Text Label 2000 9150 0    50   ~ 6
 RPWM_2
-Text Label 2000 9250 0    50   ~ 0
+Text Label 2000 9250 0    50   ~ 6
 LPWM_2
-Text Label 2000 9350 0    50   ~ 0
+Text Label 2000 9350 0    50   ~ 6
 R_EN_2
-Text Label 2000 9450 0    50   ~ 0
+Text Label 2000 9450 0    50   ~ 6
 L_EN_2
-Text Label 2000 9550 0    50   ~ 0
+Text Label 2000 9550 0    50   ~ 6
 R_IS_2
-Text Label 2000 9650 0    50   ~ 0
+Text Label 2000 9650 0    50   ~ 6
 L_IS_2
-Text Label 4000 9650 2    50   ~ 0
+Text Label 4000 9650 2    50   ~ 6
 RPWM_4
-Text Label 4000 9550 2    50   ~ 0
+Text Label 4000 9550 2    50   ~ 6
 LPWM_4
-Text Label 4000 9450 2    50   ~ 0
+Text Label 4000 9450 2    50   ~ 6
 R_EN_4
-Text Label 4000 9350 2    50   ~ 0
+Text Label 4000 9350 2    50   ~ 6
 L_EN_4
-Text Label 4000 9250 2    50   ~ 0
+Text Label 4000 9250 2    50   ~ 6
 R_IS_4
-Text Label 4000 9150 2    50   ~ 0
+Text Label 4000 9150 2    50   ~ 6
 L_IS_4
 Wire Wire Line
 	2600 9950 2600 9850
@@ -604,7 +604,7 @@ Wire Wire Line
 	4000 9250 3250 9250
 Wire Wire Line
 	3250 9150 4000 9150
-Text Notes 1700 7750 0    50   ~ 0
+Text Notes 1700 7750 0    50   ~ 6
 Note: Same pinout on both boards\n\n
 $Comp
 L Device:R R1
@@ -685,7 +685,7 @@ Wire Wire Line
 	12400 8500 12400 8650
 Wire Wire Line
 	12400 8500 13250 8500
-Text Notes 12350 1100 0    79   ~ 0
+Text Notes 12350 1100 0    79   ~ 6
 Motor drivers model: BTS7960b\nResistors are for current sensing.\n
 Text Notes 1300 7950 0    157  ~ 31
 Board-to-board connector\n\n\n
@@ -703,7 +703,7 @@ Wire Notes Line
 	1150 2600 3450 2600
 Wire Notes Line
 	3450 800  1150 800 
-Text Notes 1900 1100 0    79   ~ 0
+Text Notes 1900 1100 0    79   ~ 6
 Generic 12V server fans.\n
 $Comp
 L Device:Fuse F1
@@ -747,25 +747,25 @@ Wire Notes Line
 	1150 800  1150 2600
 Wire Wire Line
 	2250 2150 2250 2450
-Text Label 14650 3950 2    50   ~ 0
+Text Label 14650 3950 2    50   ~ 6
 motor2+
-Text Label 14650 3850 2    50   ~ 0
+Text Label 14650 3850 2    50   ~ 6
 motor2-
 Wire Wire Line
 	14150 3850 14650 3850
 Wire Wire Line
 	14150 3950 14650 3950
-Text Label 14650 6000 2    50   ~ 0
+Text Label 14650 6000 2    50   ~ 6
 motor3+
-Text Label 14650 5900 2    50   ~ 0
+Text Label 14650 5900 2    50   ~ 6
 motor3-
 Wire Wire Line
 	14150 5900 14650 5900
 Wire Wire Line
 	14150 6000 14650 6000
-Text Label 14650 8100 2    50   ~ 0
+Text Label 14650 8100 2    50   ~ 6
 motor4+
-Text Label 14650 8000 2    50   ~ 0
+Text Label 14650 8000 2    50   ~ 6
 motor4-
 Wire Wire Line
 	14150 8000 14650 8000
@@ -777,12 +777,12 @@ U 1 1 5CBD12AF
 P 13700 6250
 F 0 "U3" H 13350 6700 50  0000 L CNN
 F 1 "motor_driver" H 13350 5750 50  0000 L CNN
-F 2 "styrenhet:motor-driver" H 13350 6200 50  0001 C CNN
+F 2 "styrenhet-footprints:motor-driver" H 13350 6200 50  0001 C CNN
 F 3 "" H 13350 6200 50  0001 C CNN
 	1    13700 6250
 	1    0    0    -1  
 $EndComp
-Text Label 14800 2000 2    50   ~ 0
+Text Label 14800 2000 2    50   ~ 6
 BAT_+
 $Comp
 L power:GND #PWR026
@@ -808,9 +808,9 @@ F 3 "~" H 1850 3650 50  0001 C CNN
 	1    1850 3650
 	-1   0    0    -1  
 $EndComp
-Text Label 2400 3650 2    50   ~ 0
+Text Label 2400 3650 2    50   ~ 6
 BAT_+
-Text Label 2400 3750 2    50   ~ 0
+Text Label 2400 3750 2    50   ~ 6
 BAT_-
 Wire Wire Line
 	2050 3750 2100 3750
@@ -856,25 +856,25 @@ Wire Wire Line
 	6600 2000 6600 2450
 Wire Wire Line
 	6200 2000 6200 2450
-Text Label 6600 2450 1    50   ~ 0
+Text Label 6600 2450 1    50   ~ 6
 motor4-
-Text Label 6200 2450 1    50   ~ 0
+Text Label 6200 2450 1    50   ~ 6
 motor4+
 Wire Wire Line
 	5900 2000 5900 2450
 Wire Wire Line
 	5500 2000 5500 2450
-Text Label 5900 2450 1    50   ~ 0
+Text Label 5900 2450 1    50   ~ 6
 motor3-
-Text Label 5500 2450 1    50   ~ 0
+Text Label 5500 2450 1    50   ~ 6
 motor3+
 Wire Wire Line
 	5200 2000 5200 2450
 Wire Wire Line
 	4800 2000 4800 2450
-Text Label 5200 2450 1    50   ~ 0
+Text Label 5200 2450 1    50   ~ 6
 motor2-
-Text Label 4800 2450 1    50   ~ 0
+Text Label 4800 2450 1    50   ~ 6
 motor2+
 Connection ~ 6600 2000
 Wire Wire Line
@@ -994,9 +994,9 @@ F 3 "~" H 4300 2000 50  0001 C CNN
 	1    4300 2000
 	0    -1   -1   0   
 $EndComp
-Text Label 4500 2450 1    50   ~ 0
+Text Label 4500 2450 1    50   ~ 6
 motor1-
-Text Label 4100 2450 1    50   ~ 0
+Text Label 4100 2450 1    50   ~ 6
 motor1+
 $Comp
 L Connector:Screw_Terminal_01x02 J9
@@ -1042,9 +1042,9 @@ F 3 "~" H 4250 1350 50  0001 C CNN
 	1    4250 1350
 	0    -1   -1   0   
 $EndComp
-Text Label 14650 1900 2    50   ~ 0
+Text Label 14650 1900 2    50   ~ 6
 motor1+
-Text Label 14650 1800 2    50   ~ 0
+Text Label 14650 1800 2    50   ~ 6
 motor1-
 Wire Wire Line
 	14150 1800 14650 1800
@@ -1079,7 +1079,7 @@ Wire Wire Line
 Wire Wire Line
 	14450 2450 14450 2500
 Connection ~ 14450 2450
-Text Label 14800 4050 2    50   ~ 0
+Text Label 14800 4050 2    50   ~ 6
 BAT_+
 $Comp
 L power:GND #PWR027
@@ -1121,7 +1121,7 @@ Wire Wire Line
 Wire Wire Line
 	14450 4500 14450 4550
 Connection ~ 14450 4500
-Text Label 14800 6100 2    50   ~ 0
+Text Label 14800 6100 2    50   ~ 6
 BAT_+
 $Comp
 L power:GND #PWR028
@@ -1163,7 +1163,7 @@ Wire Wire Line
 Wire Wire Line
 	14450 6550 14450 6600
 Connection ~ 14450 6550
-Text Label 14800 8200 2    50   ~ 0
+Text Label 14800 8200 2    50   ~ 6
 BAT_+
 $Comp
 L power:GND #PWR029
@@ -1228,7 +1228,7 @@ F 3 "~" H 1850 5250 50  0001 C CNN
 	1    1850 5250
 	-1   0    0    1   
 $EndComp
-Text Label 2450 5200 2    50   ~ 0
+Text Label 2450 5200 2    50   ~ 6
 B_MCU
 Wire Notes Line
 	1150 4550 1150 5450
@@ -1238,11 +1238,11 @@ Wire Notes Line
 	4250 5450 4250 4550
 Wire Notes Line
 	4250 4550 1150 4550
-Text Notes 2750 5200 0    50   ~ 0
+Text Notes 2750 5200 0    50   ~ 6
 Note: On separate in line fuse.
-Text Label 3700 8450 2    50   ~ 0
+Text Label 3700 8450 2    50   ~ 6
 B_MCU
-Text Label 2200 8450 0    50   ~ 0
+Text Label 2200 8450 0    50   ~ 6
 B_MCU
 $Comp
 L Device:R R9
@@ -1276,7 +1276,7 @@ Wire Wire Line
 Wire Wire Line
 	11100 1550 11400 1550
 Connection ~ 11400 1550
-Text Label 11100 2550 0    50   ~ 0
+Text Label 11100 2550 0    50   ~ 6
 L_IS_1
 $Comp
 L Device:R R2
