@@ -1,4 +1,4 @@
-4082315430707352
+4083907402223485
 1-776230-1
 TE_1-776230-1
 
@@ -37743,20 +37743,6 @@ MountingHole_8.4mm_M8_Pad_Via
 0
 0
 0
-nucleo-f401re
-MODULE_NUCLEO-F401RE.pretty
-
-
-0
-80
-80
-NUCLEO-L053R8
-MODULE_NUCLEO-L053R8
-
-
-0
-112
-112
 Opto-Devices
 AmbientLightSensor_AMS_TSL2550_SMD
 
@@ -58492,16 +58478,16 @@ SO014
 14
 14
 SparkFun-DigitalIC
-SO16
-SMALL OUTLINE PACKAGE 150 MIL
-SMALL OUTLINE PACKAGE 150 MIL
+SO016
+
+
 0
 16
 16
 SparkFun-DigitalIC
-SO016
-
-
+SO16
+SMALL OUTLINE PACKAGE 150 MIL
+SMALL OUTLINE PACKAGE 150 MIL
 0
 16
 16
@@ -63958,6 +63944,27 @@ VL6180
 0
 12
 12
+styrenhet-footprints
+motor-driver
+
+
+0
+16
+12
+styrenhet-footprints
+SMD_Fuse_holder
+
+
+0
+2
+2
+styrenhet-footprints
+TerminalBlock-XXL
+
+
+0
+4
+2
 Symbols
 CE-Logo_8.5x6mm_SilkScreen
 

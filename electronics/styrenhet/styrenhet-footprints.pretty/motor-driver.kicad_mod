@@ -1,4 +1,4 @@
-(module motor-driver (layer F.Cu) (tedit 5CBA06B2)
+(module motor-driver (layer F.Cu) (tedit 5CC3123B)
   (fp_text reference REF** (at 0 0.5) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
