@@ -1004,7 +1004,7 @@ U 1 1 5CC1083C
 P 6350 1350
 F 0 "J9" V 6316 1162 50  0000 R CNN
 F 1 "Motor4_In" V 6225 1162 50  0000 R CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 6350 1350 50  0001 C CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MKDS1.5-2pol" H 6350 1350 50  0001 C CNN
 F 3 "~" H 6350 1350 50  0001 C CNN
 	1    6350 1350
 	0    -1   -1   0   
@@ -1015,7 +1015,7 @@ U 1 1 5CC107FA
 P 5650 1350
 F 0 "J8" V 5616 1162 50  0000 R CNN
 F 1 "Motor3_In" V 5525 1162 50  0000 R CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 5650 1350 50  0001 C CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MKDS1.5-2pol" H 5650 1350 50  0001 C CNN
 F 3 "~" H 5650 1350 50  0001 C CNN
 	1    5650 1350
 	0    -1   -1   0   
@@ -1026,7 +1026,7 @@ U 1 1 5CC107B6
 P 4950 1350
 F 0 "J7" V 4916 1162 50  0000 R CNN
 F 1 "Motor2_In" V 4825 1162 50  0000 R CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 4950 1350 50  0001 C CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MKDS1.5-2pol" H 4950 1350 50  0001 C CNN
 F 3 "~" H 4950 1350 50  0001 C CNN
 	1    4950 1350
 	0    -1   -1   0   
@@ -1037,7 +1037,7 @@ U 1 1 5CC10767
 P 4250 1350
 F 0 "J6" V 4216 1162 50  0000 R CNN
 F 1 "Motor1_In" V 4125 1162 50  0000 R CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 4250 1350 50  0001 C CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MKDS1.5-2pol" H 4250 1350 50  0001 C CNN
 F 3 "~" H 4250 1350 50  0001 C CNN
 	1    4250 1350
 	0    -1   -1   0   
@@ -1218,20 +1218,18 @@ Connection ~ 3400 9850
 Text Notes 1250 5150 0    157  ~ 31
 Battery in to MCU-kort\n\n
 $Comp
-L Connector:Screw_Terminal_01x01 J3
+L Connector:Screw_Terminal_01x02 J3
 U 1 1 5D3EBD49
 P 1850 5250
-F 0 "J3" H 1768 5025 50  0000 C CNN
-F 1 "Battery to MCU" H 1768 5116 50  0000 C CNN
+F 0 "J3" H 1850 5050 50  0000 C CNN
+F 1 "Battery to MCU" H 2050 5350 50  0000 C CNN
 F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MKDS1.5-2pol" H 1850 5250 50  0001 C CNN
 F 3 "~" H 1850 5250 50  0001 C CNN
 	1    1850 5250
 	-1   0    0    1   
 $EndComp
-Text Label 2450 5250 2    50   ~ 0
+Text Label 2450 5200 2    50   ~ 0
 B_MCU
-Wire Wire Line
-	2450 5250 2050 5250
 Wire Notes Line
 	1150 4550 1150 5450
 Wire Notes Line
@@ -1763,4 +1761,15 @@ Wire Wire Line
 Wire Wire Line
 	11100 8650 11400 8650
 Connection ~ 11400 8650
+Wire Wire Line
+	2050 5150 2100 5150
+Wire Wire Line
+	2100 5150 2100 5200
+Wire Wire Line
+	2100 5200 2450 5200
+Wire Wire Line
+	2050 5250 2100 5250
+Wire Wire Line
+	2100 5250 2100 5200
+Connection ~ 2100 5200
 $EndSCHEMATC
