@@ -1,4 +1,4 @@
-4085465014591485
+4087021974959485
 1-776230-1
 TE_1-776230-1
 
@@ -53697,14 +53697,14 @@ SFE_LOGO_FLAME_.4
 0
 0
 Sparkfun-Aesthetics
-SFE_LOGO_FLAME_.05
+SFE_LOGO_FLAME_.5
 
 
 0
 0
 0
 Sparkfun-Aesthetics
-SFE_LOGO_FLAME_.5
+SFE_LOGO_FLAME_.05
 
 
 0
@@ -56490,16 +56490,16 @@ SparkFun-Connectors
 40
 40
 SparkFun-Connectors
-2X3
-
-
+2X03
+PIN HEADER
+PIN HEADER
 0
 6
 6
 SparkFun-Connectors
-2X03
-PIN HEADER
-PIN HEADER
+2X3
+
+
 0
 6
 6
@@ -58464,13 +58464,6 @@ SO08WIDE
 8
 8
 SparkFun-DigitalIC
-SO14
-
-
-0
-14
-14
-SparkFun-DigitalIC
 SO014
 
 
@@ -58478,16 +58471,23 @@ SO014
 14
 14
 SparkFun-DigitalIC
-SO16
-SMALL OUTLINE PACKAGE 150 MIL
-SMALL OUTLINE PACKAGE 150 MIL
+SO14
+
+
 0
-16
-16
+14
+14
 SparkFun-DigitalIC
 SO016
 
 
+0
+16
+16
+SparkFun-DigitalIC
+SO16
+SMALL OUTLINE PACKAGE 150 MIL
+SMALL OUTLINE PACKAGE 150 MIL
 0
 16
 16
@@ -63951,6 +63951,13 @@ ETA_thl_fuseholder
 0
 4
 2
+styrenhet-footprints
+IDC-Header_2x20_Pitch2.54mm_Straight
+40 pins through hole IDC header
+IDC header socket VASCH
+0
+40
+40
 styrenhet-footprints
 motor-driver
 
