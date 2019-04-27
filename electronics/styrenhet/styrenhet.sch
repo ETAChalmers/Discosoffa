@@ -747,30 +747,6 @@ Wire Notes Line
 	1150 800  1150 2600
 Wire Wire Line
 	2250 2150 2250 2450
-Text Label 14650 3950 2    50   ~ 10
-motor2+
-Text Label 14650 3850 2    50   ~ 10
-motor2-
-Wire Wire Line
-	14150 3850 14650 3850
-Wire Wire Line
-	14150 3950 14650 3950
-Text Label 14650 6000 2    50   ~ 10
-motor3+
-Text Label 14650 5900 2    50   ~ 10
-motor3-
-Wire Wire Line
-	14150 5900 14650 5900
-Wire Wire Line
-	14150 6000 14650 6000
-Text Label 14650 8100 2    50   ~ 10
-motor4+
-Text Label 14650 8000 2    50   ~ 10
-motor4-
-Wire Wire Line
-	14150 8000 14650 8000
-Wire Wire Line
-	14150 8100 14650 8100
 $Comp
 L styrenhet-symbols:motor_driver U3
 U 1 1 5CBD12AF
@@ -840,216 +816,6 @@ Wire Notes Line
 	3450 4300 1150 4300
 Wire Notes Line
 	1150 4300 1150 2900
-Wire Notes Line
-	3750 800  3750 2600
-Wire Notes Line
-	3750 2600 7050 2600
-Wire Notes Line
-	7050 2600 7050 800 
-Wire Notes Line
-	7050 800  3750 800 
-Wire Wire Line
-	4500 2000 4500 2450
-Wire Wire Line
-	4100 2000 4100 2450
-Wire Wire Line
-	6600 2000 6600 2450
-Wire Wire Line
-	6200 2000 6200 2450
-Text Label 6600 2450 1    50   ~ 10
-motor4-
-Text Label 6200 2450 1    50   ~ 10
-motor4+
-Wire Wire Line
-	5900 2000 5900 2450
-Wire Wire Line
-	5500 2000 5500 2450
-Text Label 5900 2450 1    50   ~ 10
-motor3-
-Text Label 5500 2450 1    50   ~ 10
-motor3+
-Wire Wire Line
-	5200 2000 5200 2450
-Wire Wire Line
-	4800 2000 4800 2450
-Text Label 5200 2450 1    50   ~ 10
-motor2-
-Text Label 4800 2450 1    50   ~ 10
-motor2+
-Connection ~ 6600 2000
-Wire Wire Line
-	6450 1650 6450 1550
-Wire Wire Line
-	6600 1650 6450 1650
-Wire Wire Line
-	6600 2000 6600 1650
-Wire Wire Line
-	6600 2000 6550 2000
-Connection ~ 6200 2000
-Wire Wire Line
-	6350 1650 6350 1550
-Wire Wire Line
-	6200 1650 6350 1650
-Wire Wire Line
-	6200 2000 6200 1650
-Wire Wire Line
-	6200 2000 6250 2000
-Connection ~ 5900 2000
-Wire Wire Line
-	5900 2000 5850 2000
-Wire Wire Line
-	5900 1650 5900 2000
-Wire Wire Line
-	5750 1650 5900 1650
-Wire Wire Line
-	5750 1550 5750 1650
-Connection ~ 5500 2000
-Wire Wire Line
-	5650 1650 5650 1550
-Wire Wire Line
-	5500 1650 5650 1650
-Wire Wire Line
-	5500 2000 5500 1650
-Wire Wire Line
-	5500 2000 5550 2000
-Connection ~ 5200 2000
-Wire Wire Line
-	5200 2000 5150 2000
-Wire Wire Line
-	5200 1650 5200 2000
-Wire Wire Line
-	5050 1650 5200 1650
-Wire Wire Line
-	5050 1550 5050 1650
-Connection ~ 4800 2000
-Wire Wire Line
-	4800 1650 4950 1650
-Wire Wire Line
-	4800 2000 4800 1650
-Wire Wire Line
-	4800 2000 4850 2000
-Connection ~ 4500 2000
-Wire Wire Line
-	4350 1650 4500 1650
-Wire Wire Line
-	4500 2000 4500 1650
-Wire Wire Line
-	4500 2000 4450 2000
-Wire Wire Line
-	4950 1550 4950 1650
-Wire Wire Line
-	4350 1650 4350 1550
-Connection ~ 4100 2000
-Wire Wire Line
-	4100 2000 4150 2000
-Wire Wire Line
-	4100 1650 4100 2000
-Wire Wire Line
-	4250 1650 4100 1650
-Wire Wire Line
-	4250 1550 4250 1650
-Text Notes 3950 1150 0    157  ~ 31
-Motor connectors\n
-$Comp
-L Device:C C4
-U 1 1 5CD701D3
-P 6400 2000
-F 0 "C4" V 6655 2000 50  0000 C CNN
-F 1 "CP" V 6564 2000 50  0000 C CNN
-F 2 "Capacitors_THT:CP_Radial_D22.0mm_P10.00mm_SnapIn" H 6438 1850 50  0001 C CNN
-F 3 "~" H 6400 2000 50  0001 C CNN
-	1    6400 2000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 5CD6FE1D
-P 5700 2000
-F 0 "C3" V 5955 2000 50  0000 C CNN
-F 1 "CP" V 5864 2000 50  0000 C CNN
-F 2 "Capacitors_THT:CP_Radial_D22.0mm_P10.00mm_SnapIn" H 5738 1850 50  0001 C CNN
-F 3 "~" H 5700 2000 50  0001 C CNN
-	1    5700 2000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C2
-U 1 1 5CD6F79E
-P 5000 2000
-F 0 "C2" V 5255 2000 50  0000 C CNN
-F 1 "CP" V 5164 2000 50  0000 C CNN
-F 2 "Capacitors_THT:CP_Radial_D22.0mm_P10.00mm_SnapIn" H 5038 1850 50  0001 C CNN
-F 3 "~" H 5000 2000 50  0001 C CNN
-	1    5000 2000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 5CD6E912
-P 4300 2000
-F 0 "C1" V 4555 2000 50  0000 C CNN
-F 1 "CP" V 4464 2000 50  0000 C CNN
-F 2 "Capacitors_THT:CP_Radial_D22.0mm_P10.00mm_SnapIn" H 4338 1850 50  0001 C CNN
-F 3 "~" H 4300 2000 50  0001 C CNN
-	1    4300 2000
-	0    -1   -1   0   
-$EndComp
-Text Label 4500 2450 1    50   ~ 10
-motor1-
-Text Label 4100 2450 1    50   ~ 10
-motor1+
-$Comp
-L Connector:Screw_Terminal_01x02 J9
-U 1 1 5CC1083C
-P 6350 1350
-F 0 "J9" V 6316 1162 50  0000 R CNN
-F 1 "Motor4_In" V 6225 1162 50  0000 R CNN
-F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MKDS1.5-2pol" H 6350 1350 50  0001 C CNN
-F 3 "~" H 6350 1350 50  0001 C CNN
-	1    6350 1350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J8
-U 1 1 5CC107FA
-P 5650 1350
-F 0 "J8" V 5616 1162 50  0000 R CNN
-F 1 "Motor3_In" V 5525 1162 50  0000 R CNN
-F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MKDS1.5-2pol" H 5650 1350 50  0001 C CNN
-F 3 "~" H 5650 1350 50  0001 C CNN
-	1    5650 1350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J7
-U 1 1 5CC107B6
-P 4950 1350
-F 0 "J7" V 4916 1162 50  0000 R CNN
-F 1 "Motor2_In" V 4825 1162 50  0000 R CNN
-F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MKDS1.5-2pol" H 4950 1350 50  0001 C CNN
-F 3 "~" H 4950 1350 50  0001 C CNN
-	1    4950 1350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J6
-U 1 1 5CC10767
-P 4250 1350
-F 0 "J6" V 4216 1162 50  0000 R CNN
-F 1 "Motor1_In" V 4125 1162 50  0000 R CNN
-F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MKDS1.5-2pol" H 4250 1350 50  0001 C CNN
-F 3 "~" H 4250 1350 50  0001 C CNN
-	1    4250 1350
-	0    -1   -1   0   
-$EndComp
-Text Label 14650 1900 2    50   ~ 10
-motor1+
-Text Label 14650 1800 2    50   ~ 10
-motor1-
-Wire Wire Line
-	14150 1800 14650 1800
-Wire Wire Line
-	14150 1900 14650 1900
 $Comp
 L Device:CP C17
 U 1 1 5D24F241
@@ -1772,4 +1538,12 @@ Wire Wire Line
 Wire Wire Line
 	2100 5250 2100 5200
 Connection ~ 2100 5200
+NoConn ~ 14150 1800
+NoConn ~ 14150 1900
+NoConn ~ 14150 3950
+NoConn ~ 14150 3850
+NoConn ~ 14150 6000
+NoConn ~ 14150 5900
+NoConn ~ 14150 8100
+NoConn ~ 14150 8000
 $EndSCHEMATC
