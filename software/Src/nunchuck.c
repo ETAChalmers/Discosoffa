@@ -44,8 +44,39 @@ void HAL_NUNCHUCK_Read(NUNCHUCK_HandleTypeDef* nun)
 {
 	HAL_NUNCHUCK_ReadRaw(nun);
 
-	nun->xJoy = (float)((nun->xJoyRaw+nun->xJoyOffset))/((float)(127+nun->xJoyOffset));
-	nun->yJoy = (float)((nun->yJoyRaw+nun->yJoyOffset))/((float)(127+nun->yJoyOffset));
+	if(nun->DeadZoneEnable == 1)
+	{
+		if(nun->xJoyRaw+nun->xJoyOffset > nun->xJoyDeadZone)
+		{
+			nun->xJoy = (float) (nun->xJoyRaw+nun->xJoyOffset-nun->xJoyDeadZone)/((float)(128+nun->xJoyOffset-nun->xJoyDeadZone));
+		}
+		else if(nun->xJoyRaw+nun->xJoyOffset < -nun->xJoyDeadZone)
+		{
+			nun->xJoy = (float) (nun->xJoyRaw+nun->xJoyOffset+nun->xJoyDeadZone)/((float)(128-nun->xJoyOffset-nun->xJoyDeadZone));
+		}
+		else
+		{
+			nun->xJoy = 0;
+		}
+
+		if(nun->yJoyRaw+nun->yJoyOffset > nun->yJoyDeadZone)
+		{
+			nun->yJoy = (float) (nun->yJoyRaw+nun->yJoyOffset-nun->yJoyDeadZone)/((float)(128+nun->yJoyOffset-nun->yJoyDeadZone));
+		}
+		else if(nun->yJoyRaw+nun->yJoyOffset < -nun->yJoyDeadZone)
+		{
+			nun->yJoy = (float) (nun->yJoyRaw+nun->yJoyOffset+nun->yJoyDeadZone)/((float)(128-nun->yJoyOffset-nun->yJoyDeadZone));
+		}
+		else
+		{
+			nun->yJoy = 0;
+		}
+	}
+	else
+	{
+		nun->xJoy = (float)(nun->xJoyRaw+nun->xJoyOffset)/((float)(128+nun->xJoyOffset));
+		nun->yJoy = (float)(nun->yJoyRaw+nun->yJoyOffset)/((float)(128+nun->yJoyOffset));
+	}
 }
 
 void HAL_NUNCHUCK_Calibrate(NUNCHUCK_HandleTypeDef* nun)

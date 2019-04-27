@@ -62,7 +62,8 @@ MOTOR_HandleTypeDef motor2;
 MOTOR_HandleTypeDef motor3;
 MOTOR_HandleTypeDef motor4;
 
-BUZZER_HandlerTypeDef buzzer;
+BOARD_BuzzerHandlerTypeDef buzzer;
+BOARD_BatteryVoltageHandlerTypedef hbat;
 
 uint8_t uartBuffer[50];
 uint16_t adcBuffer[9];
@@ -80,6 +81,11 @@ static void MX_TIM3_Init(void);
 static void MX_TIM4_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
+
+static void MX_BOARD_Init(void);
+static void MX_MOTOR_Init(void);
+static void MX_NUNCHUCK_Init(void);
+
 
 /* USER CODE END PFP */
 
@@ -123,24 +129,22 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM4_Init();
   MX_USART2_UART_Init();
+
   /* USER CODE BEGIN 2 */
+  /* Initialize drivers */
+  MX_BOARD_Init();
+  MX_MOTOR_Init();
+  MX_NUNCHUCK_Init();
 
+  /* Play startup sound */
+  HAL_BOARD_BuzzerBeep(&buzzer,440,200);
+  HAL_BOARD_BuzzerBeep(&buzzer,440*2,200);
+  HAL_BOARD_BuzzerBeep(&buzzer,440*3,200);
+  HAL_BOARD_BuzzerBeep(&buzzer,440*4,200);
+  HAL_BOARD_BuzzerBeep(&buzzer,440,300);
+
+  /* Start ADC DMA */
   HAL_ADC_Start_DMA(&hadc1, (uint32_t *) adcBuffer, 9);
-  //HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);
-
-  nun1.HI2C = &hi2c3;
-
-  motor1.LeftHtim=&htim3;
-  motor1.RightHtim=&htim3;
-  motor1.LeftTimerChannel=TIM_CHANNEL_1;
-  motor1.RightTimerChannel=TIM_CHANNEL_2;
-
-  HAL_MOTOR_Init(&motor1);
-
-  buzzer.Htim = &htim2;
-  buzzer.TimerChannel = TIM_CHANNEL_3;
-
-  HAL_NUNCHUCK_Calibrate(&nun1);
 
   /* USER CODE END 2 */
 
@@ -154,9 +158,41 @@ int main(void)
 
 	  HAL_NUNCHUCK_Read(&nun1);
 
-	  HAL_MOTOR_write(&motor1,nun1.yJoy*127.0+127,HAL_MOTOR_DIRECTION_REVERSE);
+	  if(nun1.zButton != 1)
+	  {
+		  motor1.TargetMotorMode = HAL_MOTOR_MODE_BREAK;
+	  }
+	  else if(nun1.yJoy == 0)
+	  {
+		  motor1.TargetMotorMode = HAL_MOTOR_MODE_DISABLE;
+	  }
+	  else if(nun1.yJoy > 0)
+	  {
+		  motor1.TargetMotorMode = HAL_MOTOR_MODE_FORWARD;
+		  motor1.TargetDuty = nun1.yJoy*0xFF;
+	  }
+	  else if(nun1.yJoy < 0)
+	  {
+		  motor1.TargetMotorMode = HAL_MOTOR_MODE_REVERSE;
+		  motor1.TargetDuty = -nun1.yJoy*0xFF;
+	  }
 
-	  HAL_Delay(100);
+
+	  if(nun1.cButton == 1)
+	  {
+	  	  HAL_BOARD_BuzzerTone(&buzzer,440);
+	  }
+	  else
+	  {
+		  HAL_BOARD_BuzzerSilence(&buzzer);
+	  }
+
+	  HAL_MOTOR_Update(&motor1);
+
+	  /*sprintf((char *) uartBuffer,"%d, ", motor1.TargetDuty);
+	  HAL_UART_Transmit(&huart2,uartBuffer,20,100);*/
+
+	  HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
@@ -203,6 +239,51 @@ void SystemClock_Config(void)
   }
 }
 
+static void MX_NUNCHUCK_Init(void)
+{
+	nun1.HI2C = &hi2c3;
+	nun1.DeadZoneEnable = 1;
+	nun1.xJoyDeadZone = 50;
+	nun1.yJoyDeadZone = 50;
+
+	HAL_NUNCHUCK_Calibrate(&nun1);
+}
+
+static void MX_MOTOR_Init(void)
+{
+	motor1.RightHtim=&htim3;
+	motor1.LeftHtim=&htim4;
+	motor1.RightTimerChannel=TIM_CHANNEL_4;
+	motor1.LeftTimerChannel=TIM_CHANNEL_2;
+	motor1.CutOfCurrent = 10;
+	motor1.MaxCurrent = 5;
+	motor1.MaxDuty = 255;
+	motor1.DutyChangeFactor = 0.2;
+	motor1.RightEnableGPIOTypeDef = R_EN_1_GPIO_Port;
+	motor1.RightEnableGPIOPin = R_EN_1_Pin;
+	motor1.LeftEnableGPIOTypeDef = L_EN_1_GPIO_Port;
+	motor1.LeftEnableGPIOPin = L_EN_1_Pin;
+	motor1.RightCompareReg = &htim3.Instance->CCR4;
+	motor1.LeftCompareReg = &htim4.Instance->CCR2;
+	motor1.ModeChangeTick = 10;
+	motor1.ISenseResistor = 330;
+	motor1.RawRightCurrent = &adcBuffer[4];
+	motor1.RawLeftCurrent = &adcBuffer[8];
+
+	HAL_MOTOR_Init(&motor1);
+}
+
+static void MX_BOARD_Init(void)
+{
+	//Buzzer setup
+	buzzer.Htim = &htim2;
+	buzzer.TimerChannel = TIM_CHANNEL_3;
+
+	//Battery voltage setup
+	hbat.RawBatteryVoltage = &adcBuffer[0];
+	hbat.ScalingFactor = 7.829;
+}
+
 /**
   * @brief ADC1 Initialization Function
   * @param None
@@ -242,7 +323,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_7;
   sConfig.Rank = 1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_480CYCLES;
+  sConfig.SamplingTime = ADC_SAMPLETIME_56CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();

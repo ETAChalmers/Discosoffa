@@ -210,7 +210,7 @@ void ADC_IRQHandler(void)
   HAL_ADC_IRQHandler(&hadc1);
   /* USER CODE BEGIN ADC_IRQn 1 */
 
-  //Start next conversion
+
 
   /* USER CODE END ADC_IRQn 1 */
 }

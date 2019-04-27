@@ -2,14 +2,15 @@
 #define _NUNCHUCK_H_
 
 #include "stm32f4xx_hal.h"
+#include "stdlib.h"
 
 #define NUNCHUCK_ADDRESS (0x52 << 1)
 
 typedef struct {
 	float xJoy, yJoy;
-	int8_t xJoyRaw, yJoyRaw, xJoyOffset, yJoyOffset;
+	int8_t xJoyRaw, yJoyRaw, xJoyOffset, yJoyOffset,xJoyDeadZone,yJoyDeadZone;
 	uint16_t xAccel, yAccel, zAccel;
-	uint8_t cButton, zButton, Connected,Calibrated;
+	uint8_t cButton, zButton, Connected,Calibrated,DeadZoneEnable;
 	I2C_HandleTypeDef* HI2C;
 
 } NUNCHUCK_HandleTypeDef;

@@ -34,8 +34,8 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #include "nunchuck.h"
 #include "motor.h"
-#include "buzzer.h"
-#include "stdio.h"
+#include "board.h"
+#include <stdio.h>
 
 /* USER CODE END Includes */
 
