@@ -98,10 +98,6 @@ Text Label 12600 2100 0    50   ~ 10
 L_EN_1
 Text Label 11100 1550 0    50   ~ 10
 R_IS_1
-Wire Wire Line
-	12600 2100 13250 2100
-Wire Wire Line
-	13250 2000 12600 2000
 $Comp
 L styrenhet-symbols:motor_driver U2
 U 1 1 5CBCE71F
@@ -485,21 +481,19 @@ Connection ~ 2600 10050
 Wire Wire Line
 	2600 10050 2600 10250
 Text Label 3900 9050 2    50   ~ 10
-RPWM_3
+LPWM_3
 Wire Wire Line
 	3900 9050 3250 9050
 Text Label 3900 8950 2    50   ~ 10
-LPWM_3
+RPWM_3
 Wire Wire Line
 	3900 8950 3250 8950
 Text Label 3900 8850 2    50   ~ 10
 R_EN_3
 Text Label 3900 8750 2    50   ~ 10
 L_EN_3
-Text Label 3900 8650 2    50   ~ 10
-R_IS_3
 Text Label 3900 8550 2    50   ~ 10
-L_IS_3
+L_IS_4
 Wire Wire Line
 	3900 8550 3250 8550
 Wire Wire Line
@@ -509,11 +503,11 @@ Wire Wire Line
 Wire Wire Line
 	3250 8850 3900 8850
 Text Label 2100 8550 0    50   ~ 10
-RPWM_1
+LPWM_1
 Wire Wire Line
 	2100 8550 2750 8550
 Text Label 2100 8650 0    50   ~ 10
-LPWM_1
+RPWM_1
 Wire Wire Line
 	2100 8650 2750 8650
 Text Label 2100 8750 0    50   ~ 10
@@ -523,7 +517,7 @@ L_EN_1
 Text Label 2100 8950 0    50   ~ 10
 R_IS_1
 Text Label 2100 9050 0    50   ~ 10
-L_IS_1
+L_IS_2
 Wire Wire Line
 	2100 9050 2750 9050
 Wire Wire Line
@@ -533,9 +527,9 @@ Wire Wire Line
 Wire Wire Line
 	2750 8750 2100 8750
 Text Label 2000 9150 0    50   ~ 10
-RPWM_2
-Text Label 2000 9250 0    50   ~ 10
 LPWM_2
+Text Label 2000 9250 0    50   ~ 10
+RPWM_2
 Text Label 2000 9350 0    50   ~ 10
 R_EN_2
 Text Label 2000 9450 0    50   ~ 10
@@ -543,11 +537,11 @@ L_EN_2
 Text Label 2000 9550 0    50   ~ 10
 R_IS_2
 Text Label 2000 9650 0    50   ~ 10
-L_IS_2
+L_IS_1
 Text Label 4000 9650 2    50   ~ 10
-RPWM_4
-Text Label 4000 9550 2    50   ~ 10
 LPWM_4
+Text Label 4000 9550 2    50   ~ 10
+RPWM_4
 Text Label 4000 9450 2    50   ~ 10
 R_EN_4
 Text Label 4000 9350 2    50   ~ 10
@@ -555,7 +549,7 @@ L_EN_4
 Text Label 4000 9250 2    50   ~ 10
 R_IS_4
 Text Label 4000 9150 2    50   ~ 10
-L_IS_4
+L_IS_3
 Wire Wire Line
 	2600 9950 2600 9850
 Wire Wire Line
@@ -816,24 +810,6 @@ Wire Notes Line
 	3450 4300 1150 4300
 Wire Notes Line
 	1150 4300 1150 2900
-$Comp
-L Device:CP C17
-U 1 1 5D24F241
-P 14450 2250
-F 0 "C17" H 14568 2296 50  0000 L CNN
-F 1 "CP" H 14568 2205 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D22.0mm_P10.00mm_SnapIn" H 14488 2100 50  0001 C CNN
-F 3 "~" H 14450 2250 50  0001 C CNN
-	1    14450 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14150 2000 14450 2000
-Wire Wire Line
-	14450 2000 14450 2100
-Connection ~ 14450 2000
-Wire Wire Line
-	14450 2000 14800 2000
 Wire Wire Line
 	14150 2100 14250 2100
 Wire Wire Line
@@ -841,10 +817,7 @@ Wire Wire Line
 Wire Wire Line
 	14250 2450 14450 2450
 Wire Wire Line
-	14450 2450 14450 2400
-Wire Wire Line
 	14450 2450 14450 2500
-Connection ~ 14450 2450
 Text Label 14800 4050 2    50   ~ 10
 BAT_+
 $Comp
@@ -900,24 +873,6 @@ F 3 "" H 14450 6600 50  0001 C CNN
 	1    14450 6600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:CP C19
-U 1 1 5D35BBFF
-P 14450 6350
-F 0 "C19" H 14568 6396 50  0000 L CNN
-F 1 "CP" H 14568 6305 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D22.0mm_P10.00mm_SnapIn" H 14488 6200 50  0001 C CNN
-F 3 "~" H 14450 6350 50  0001 C CNN
-	1    14450 6350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14150 6100 14450 6100
-Wire Wire Line
-	14450 6100 14450 6200
-Connection ~ 14450 6100
-Wire Wire Line
-	14450 6100 14800 6100
 Wire Wire Line
 	14150 6200 14250 6200
 Wire Wire Line
@@ -925,10 +880,7 @@ Wire Wire Line
 Wire Wire Line
 	14250 6550 14450 6550
 Wire Wire Line
-	14450 6550 14450 6500
-Wire Wire Line
 	14450 6550 14450 6600
-Connection ~ 14450 6550
 Text Label 14800 8200 2    50   ~ 10
 BAT_+
 $Comp
@@ -1546,4 +1498,41 @@ NoConn ~ 14150 6000
 NoConn ~ 14150 5900
 NoConn ~ 14150 8100
 NoConn ~ 14150 8000
+Connection ~ 14450 2450
+Wire Wire Line
+	14450 2450 14450 2400
+Wire Wire Line
+	14450 2000 14800 2000
+Wire Wire Line
+	14150 2000 14450 2000
+Connection ~ 14450 2000
+Wire Wire Line
+	14450 2000 14450 2100
+$Comp
+L Device:CP C17
+U 1 1 5D24F241
+P 14450 2250
+F 0 "C17" H 14568 2296 50  0000 L CNN
+F 1 "CP" H 14568 2205 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D22.0mm_P10.00mm_SnapIn" H 14488 2100 50  0001 C CNN
+F 3 "~" H 14450 2250 50  0001 C CNN
+	1    14450 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14150 6100 14800 6100
+Text Label 3900 8650 2    50   ~ 10
+R_IS_3
+Wire Wire Line
+	12550 2000 13250 2000
+Wire Wire Line
+	12550 2100 12550 2000
+Wire Wire Line
+	12550 2100 13250 2100
+Wire Wire Line
+	12600 4150 12600 4050
+Wire Wire Line
+	12600 6200 12600 6100
+Wire Wire Line
+	12600 8300 12600 8200
 $EndSCHEMATC
