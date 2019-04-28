@@ -40,10 +40,10 @@ typedef struct
 {
 	TIM_HandleTypeDef *LeftHtim, *RightHtim;
 	uint32_t LeftTimerChannel, RightTimerChannel;
-	GPIO_TypeDef *RightEnableGPIOTypeDef, *LeftEnableGPIOTypeDef;
-	uint16_t RightEnableGPIOPin, LeftEnableGPIOPin;
+	GPIO_TypeDef *EnableGPIOTypeDef;
+	uint16_t EnableGPIOPin;
 	__IO uint32_t *RightCompareReg, *LeftCompareReg;
-	uint32_t TargetDuty, MaxDuty;
+	uint32_t TargetDuty, CurrentDuty, MaxDuty, MaxChange;
 	uint16_t *RawRightCurrent, *RawLeftCurrent, ISenseResistor;
 	float LeftCurrent, RightCurrent, CutOfCurrent, MaxCurrent, DutyChangeFactor;
 	MOTOR_ModeTypeDef TargetMotorMode, MotorMode;
@@ -61,6 +61,7 @@ void HAL_MOTOR_Update(MOTOR_HandleTypeDef *mot);
 void MOTOR_Disable(MOTOR_HandleTypeDef *mot);
 void MOTOR_Break(MOTOR_HandleTypeDef *mot);
 
+void MOTOR_SetDuty(MOTOR_HandleTypeDef *mot, uint16_t duty);
 
 
 #endif

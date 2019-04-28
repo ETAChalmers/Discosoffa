@@ -129,7 +129,6 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM4_Init();
   MX_USART2_UART_Init();
-
   /* USER CODE BEGIN 2 */
   /* Initialize drivers */
   MX_BOARD_Init();
@@ -189,10 +188,7 @@ int main(void)
 
 	  HAL_MOTOR_Update(&motor1);
 
-	  /*sprintf((char *) uartBuffer,"%d, ", motor1.TargetDuty);
-	  HAL_UART_Transmit(&huart2,uartBuffer,20,100);*/
-
-	  HAL_Delay(10);
+	  HAL_Delay(20);
   }
   /* USER CODE END 3 */
 }
@@ -237,51 +233,6 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-}
-
-static void MX_NUNCHUCK_Init(void)
-{
-	nun1.HI2C = &hi2c3;
-	nun1.DeadZoneEnable = 1;
-	nun1.xJoyDeadZone = 50;
-	nun1.yJoyDeadZone = 50;
-
-	HAL_NUNCHUCK_Calibrate(&nun1);
-}
-
-static void MX_MOTOR_Init(void)
-{
-	motor1.RightHtim=&htim3;
-	motor1.LeftHtim=&htim4;
-	motor1.RightTimerChannel=TIM_CHANNEL_4;
-	motor1.LeftTimerChannel=TIM_CHANNEL_2;
-	motor1.CutOfCurrent = 10;
-	motor1.MaxCurrent = 5;
-	motor1.MaxDuty = 255;
-	motor1.DutyChangeFactor = 0.2;
-	motor1.RightEnableGPIOTypeDef = R_EN_1_GPIO_Port;
-	motor1.RightEnableGPIOPin = R_EN_1_Pin;
-	motor1.LeftEnableGPIOTypeDef = L_EN_1_GPIO_Port;
-	motor1.LeftEnableGPIOPin = L_EN_1_Pin;
-	motor1.RightCompareReg = &htim3.Instance->CCR4;
-	motor1.LeftCompareReg = &htim4.Instance->CCR2;
-	motor1.ModeChangeTick = 10;
-	motor1.ISenseResistor = 330;
-	motor1.RawRightCurrent = &adcBuffer[4];
-	motor1.RawLeftCurrent = &adcBuffer[8];
-
-	HAL_MOTOR_Init(&motor1);
-}
-
-static void MX_BOARD_Init(void)
-{
-	//Buzzer setup
-	buzzer.Htim = &htim2;
-	buzzer.TimerChannel = TIM_CHANNEL_3;
-
-	//Battery voltage setup
-	hbat.RawBatteryVoltage = &adcBuffer[0];
-	hbat.ScalingFactor = 7.829;
 }
 
 /**
@@ -696,22 +647,15 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, R_EN_1_Pin|L_EN_1_Pin|LED2_Pin|L_EN_2_Pin 
-                          |R_EN_2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, EN_1_Pin|LED2_Pin|EN_2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, L_EN_4_Pin|R_EN_3_Pin|R_EN_4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, EN_3_Pin|EN_4_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(L_EN_3_GPIO_Port, L_EN_3_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pins : R_EN_1_Pin L_EN_1_Pin LED2_Pin L_EN_2_Pin 
-                           R_EN_2_Pin */
-  GPIO_InitStruct.Pin = R_EN_1_Pin|L_EN_1_Pin|LED2_Pin|L_EN_2_Pin 
-                          |R_EN_2_Pin;
+  /*Configure GPIO pins : EN_1_Pin LED2_Pin EN_2_Pin */
+  GPIO_InitStruct.Pin = EN_1_Pin|LED2_Pin|EN_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -723,23 +667,131 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(DEVICE_DETECT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : L_EN_4_Pin R_EN_3_Pin R_EN_4_Pin */
-  GPIO_InitStruct.Pin = L_EN_4_Pin|R_EN_3_Pin|R_EN_4_Pin;
+  /*Configure GPIO pins : EN_3_Pin EN_4_Pin */
+  GPIO_InitStruct.Pin = EN_3_Pin|EN_4_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : L_EN_3_Pin */
-  GPIO_InitStruct.Pin = L_EN_3_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(L_EN_3_GPIO_Port, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */
+
+static void MX_NUNCHUCK_Init(void)
+{
+	nun1.HI2C = &hi2c3;
+    nun1.DeadZoneEnable = 1;
+    nun1.xJoyDeadZone = 50;
+    nun1.yJoyDeadZone = 50;
+
+    HAL_NUNCHUCK_Calibrate(&nun1);
+}
+
+
+
+static void MX_MOTOR_Init(void)
+{
+	/* Motor 1 setup */
+	motor1.RightHtim=&htim4;
+	motor1.LeftHtim=&htim3;
+	motor1.RightTimerChannel=TIM_CHANNEL_2;
+	motor1.LeftTimerChannel=TIM_CHANNEL_4;
+	motor1.CutOfCurrent = 10;
+	motor1.MaxCurrent = 5;
+	motor1.MaxDuty = 255;
+	motor1.DutyChangeFactor = DUTY_CHANGE_FACTOR;
+	motor1.EnableGPIOTypeDef = EN_1_GPIO_Port;
+	motor1.EnableGPIOPin = EN_1_Pin;
+	motor1.RightCompareReg = &htim4.Instance->CCR2;
+	motor1.LeftCompareReg = &htim3.Instance->CCR4;
+	motor1.ModeChangeTick = MODE_CHANGE_TICKS;
+	motor1.ISenseResistor = CURRENT_SENSE_RESISTOR;
+	motor1.RawRightCurrent = &adcBuffer[4];
+	motor1.RawLeftCurrent = &adcBuffer[8];
+	motor1.MaxChange = MAX_DUTY_CHANGE;
+
+	HAL_MOTOR_Init(&motor1);
+
+	/* Motor 2 setup */
+	motor2.RightHtim=&htim3;
+	motor2.LeftHtim=&htim3;
+	motor2.RightTimerChannel=TIM_CHANNEL_1;
+	motor2.LeftTimerChannel=TIM_CHANNEL_3;
+	motor2.CutOfCurrent = CURRENT_DISABLE_LIMIT;
+	motor2.MaxCurrent = CURRENT_REGULATION_LIMIT;
+	motor2.MaxDuty = 255;
+	motor2.DutyChangeFactor = DUTY_CHANGE_FACTOR;
+	motor2.EnableGPIOTypeDef = EN_2_GPIO_Port;
+	motor2.EnableGPIOPin = EN_2_Pin;
+	motor2.RightCompareReg = &htim3.Instance->CCR1;
+	motor2.LeftCompareReg = &htim3.Instance->CCR3;
+	motor2.ModeChangeTick = MODE_CHANGE_TICKS;
+	motor2.ISenseResistor = CURRENT_SENSE_RESISTOR;
+	motor2.RawRightCurrent = &adcBuffer[2];
+	motor2.RawLeftCurrent = &adcBuffer[8];
+	motor2.MaxChange = MAX_DUTY_CHANGE;
+
+
+	HAL_MOTOR_Init(&motor2);
+
+	/* Motor 3 setup */
+	motor3.RightHtim=&htim4;
+	motor3.LeftHtim=&htim4;
+	motor3.RightTimerChannel=TIM_CHANNEL_3;
+	motor3.LeftTimerChannel=TIM_CHANNEL_4;
+	motor3.CutOfCurrent = CURRENT_DISABLE_LIMIT;
+	motor3.MaxCurrent = CURRENT_REGULATION_LIMIT;
+	motor3.MaxDuty = 255;
+	motor3.DutyChangeFactor = DUTY_CHANGE_FACTOR;
+	motor3.EnableGPIOTypeDef = EN_3_GPIO_Port;
+	motor3.EnableGPIOPin = EN_3_Pin;
+	motor3.RightCompareReg = &htim4.Instance->CCR3;
+	motor3.LeftCompareReg = &htim4.Instance->CCR4;
+	motor3.ModeChangeTick = MODE_CHANGE_TICKS;
+	motor3.ISenseResistor = CURRENT_SENSE_RESISTOR;
+	motor3.RawRightCurrent = &adcBuffer[2];
+	motor3.RawLeftCurrent = &adcBuffer[6];
+	motor3.MaxChange = MAX_DUTY_CHANGE;
+
+
+	HAL_MOTOR_Init(&motor3);
+
+	/* Motor 4 setup */
+	motor4.RightHtim=&htim4;
+	motor4.LeftHtim=&htim3;
+	motor4.RightTimerChannel=TIM_CHANNEL_1;
+	motor4.LeftTimerChannel=TIM_CHANNEL_2;
+	motor4.CutOfCurrent = CURRENT_DISABLE_LIMIT;
+	motor4.MaxCurrent = CURRENT_REGULATION_LIMIT;
+	motor4.MaxDuty = 255;
+	motor4.DutyChangeFactor = DUTY_CHANGE_FACTOR;
+	motor4.EnableGPIOTypeDef = EN_4_GPIO_Port;
+	motor4.EnableGPIOPin = EN_4_Pin;
+	motor4.RightCompareReg = &htim4.Instance->CCR1;
+	motor4.LeftCompareReg = &htim3.Instance->CCR2;
+	motor4.ModeChangeTick = MODE_CHANGE_TICKS;
+	motor4.ISenseResistor = CURRENT_SENSE_RESISTOR;
+	motor4.RawRightCurrent = &adcBuffer[1];
+	motor4.RawLeftCurrent = &adcBuffer[5];
+	motor4.MaxChange = MAX_DUTY_CHANGE;
+
+
+	HAL_MOTOR_Init(&motor4);
+}
+
+static void MX_BOARD_Init(void)
+{
+	//Buzzer setup
+	buzzer.Htim = &htim2;
+	buzzer.TimerChannel = TIM_CHANNEL_3;
+
+	//Battery voltage setup
+	hbat.RawBatteryVoltage = &adcBuffer[0];
+	hbat.ScalingFactor = 7.829;
+}
+
+
 
 /* USER CODE END 4 */
 

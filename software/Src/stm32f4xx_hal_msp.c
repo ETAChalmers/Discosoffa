@@ -111,8 +111,8 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     PB0     ------> ADC1_IN8
     PB1     ------> ADC1_IN9 
     */
-    GPIO_InitStruct.Pin = L_IS_4_Pin|R_IS_1_Pin|L_IS_3_Pin|R_IS_3_Pin 
-                          |L_IS_2_Pin|L_IS_1_Pin;
+    GPIO_InitStruct.Pin = L_IS_3_Pin|R_IS_1_Pin|L_IS_4_Pin|R_IS_3_Pin 
+                          |L_IS_1_Pin|L_IS_2_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
@@ -183,8 +183,8 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
     PB0     ------> ADC1_IN8
     PB1     ------> ADC1_IN9 
     */
-    HAL_GPIO_DeInit(GPIOC, L_IS_4_Pin|R_IS_1_Pin|L_IS_3_Pin|R_IS_3_Pin 
-                          |L_IS_2_Pin|L_IS_1_Pin);
+    HAL_GPIO_DeInit(GPIOC, L_IS_3_Pin|R_IS_1_Pin|L_IS_4_Pin|R_IS_3_Pin 
+                          |L_IS_1_Pin|L_IS_2_Pin);
 
     HAL_GPIO_DeInit(B_READ_GPIO_Port, B_READ_Pin);
 
@@ -365,7 +365,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
     PC8     ------> TIM3_CH3
     PC9     ------> TIM3_CH4 
     */
-    GPIO_InitStruct.Pin = LPWM_2_Pin|RPWM_4_Pin|RPWM_2_Pin|RPWM_1_Pin;
+    GPIO_InitStruct.Pin = RPWM_2_Pin|LPWM_4_Pin|LPWM_2_Pin|LPWM_1_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -389,7 +389,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
     PB8     ------> TIM4_CH3
     PB9     ------> TIM4_CH4 
     */
-    GPIO_InitStruct.Pin = LPWM_4_Pin|LPWM_1_Pin|LPWM_3_Pin|RPWM_3_Pin;
+    GPIO_InitStruct.Pin = RPWM_4_Pin|RPWM_1_Pin|RPWM_3_Pin|LPWM_3_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
