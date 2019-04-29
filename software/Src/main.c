@@ -68,6 +68,12 @@ BOARD_BatteryVoltageHandlerTypedef hbat;
 uint8_t uartBuffer[50];
 uint16_t adcBuffer[9];
 
+uint8_t speed;
+uint8_t leftSpeed;
+uint8_t rightSpeed;
+
+MOTOR_ModeTypeDef motorMode;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -157,36 +163,57 @@ int main(void)
 
 	  HAL_NUNCHUCK_Read(&nun1);
 
-	  if(nun1.zButton != 1)
+	  if((nun1.zButton != 1) || (nun1.cButton == 1))
 	  {
-		  motor1.TargetMotorMode = HAL_MOTOR_MODE_BREAK;
+		  motorMode = HAL_MOTOR_MODE_BREAK;
 	  }
 	  else if(nun1.yJoy == 0)
 	  {
-		  motor1.TargetMotorMode = HAL_MOTOR_MODE_DISABLE;
+		  motorMode = HAL_MOTOR_MODE_DISABLE;
 	  }
 	  else if(nun1.yJoy > 0)
 	  {
-		  motor1.TargetMotorMode = HAL_MOTOR_MODE_FORWARD;
-		  motor1.TargetDuty = nun1.yJoy*0xFF;
+		  motorMode = HAL_MOTOR_MODE_FORWARD;
+		  speed = nun1.yJoy*0xFF;
 	  }
 	  else if(nun1.yJoy < 0)
 	  {
-		  motor1.TargetMotorMode = HAL_MOTOR_MODE_REVERSE;
-		  motor1.TargetDuty = -nun1.yJoy*0xFF;
+		  motorMode = HAL_MOTOR_MODE_REVERSE;
+		  speed = -nun1.yJoy*0xFF;
 	  }
 
 
-	  if(nun1.cButton == 1)
+	  if(nun1.xJoy > 0)
 	  {
-	  	  HAL_BOARD_BuzzerTone(&buzzer,440);
+		  leftSpeed = speed;
+		  rightSpeed = (1.0f-nun1.xJoy)*speed;
+	  }
+	  else if(nun1.xJoy < 0)
+	  {
+		  rightSpeed = speed;
+		  leftSpeed = (1.0f+nun1.xJoy)*speed;
 	  }
 	  else
 	  {
-		  HAL_BOARD_BuzzerSilence(&buzzer);
+		  rightSpeed = speed;
+		  leftSpeed = speed;
 	  }
 
+	  motor1.TargetDuty = rightSpeed;
+	  motor3.TargetDuty = rightSpeed;
+
+	  motor2.TargetDuty = leftSpeed;
+	  motor4.TargetDuty = leftSpeed;
+
+	  motor1.TargetMotorMode = motorMode;
+	  motor2.TargetMotorMode = motorMode;
+	  motor3.TargetMotorMode = motorMode;
+	  motor4.TargetMotorMode = motorMode;
+
 	  HAL_MOTOR_Update(&motor1);
+	  HAL_MOTOR_Update(&motor2);
+	  HAL_MOTOR_Update(&motor3);
+	  HAL_MOTOR_Update(&motor4);
 
 	  HAL_Delay(20);
   }
@@ -462,7 +489,7 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 12;
+  htim3.Init.Prescaler = 30;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 0xFF;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -534,7 +561,7 @@ static void MX_TIM4_Init(void)
 
   /* USER CODE END TIM4_Init 1 */
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 12;
+  htim4.Init.Prescaler = 30;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim4.Init.Period = 0xFF;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -699,7 +726,8 @@ static void MX_MOTOR_Init(void)
 	motor1.LeftTimerChannel=TIM_CHANNEL_4;
 	motor1.CutOfCurrent = 10;
 	motor1.MaxCurrent = 5;
-	motor1.MaxDuty = 255;
+	motor1.MaxDuty = 225;
+	motor1.MinDuty = MIN_DUTY;
 	motor1.DutyChangeFactor = DUTY_CHANGE_FACTOR;
 	motor1.EnableGPIOTypeDef = EN_1_GPIO_Port;
 	motor1.EnableGPIOPin = EN_1_Pin;
@@ -709,8 +737,6 @@ static void MX_MOTOR_Init(void)
 	motor1.ISenseResistor = CURRENT_SENSE_RESISTOR;
 	motor1.RawRightCurrent = &adcBuffer[4];
 	motor1.RawLeftCurrent = &adcBuffer[8];
-	motor1.MaxChange = MAX_DUTY_CHANGE;
-
 	HAL_MOTOR_Init(&motor1);
 
 	/* Motor 2 setup */
@@ -720,7 +746,8 @@ static void MX_MOTOR_Init(void)
 	motor2.LeftTimerChannel=TIM_CHANNEL_3;
 	motor2.CutOfCurrent = CURRENT_DISABLE_LIMIT;
 	motor2.MaxCurrent = CURRENT_REGULATION_LIMIT;
-	motor2.MaxDuty = 255;
+	motor2.MaxDuty = 225;
+	motor2.MinDuty = MIN_DUTY;
 	motor2.DutyChangeFactor = DUTY_CHANGE_FACTOR;
 	motor2.EnableGPIOTypeDef = EN_2_GPIO_Port;
 	motor2.EnableGPIOPin = EN_2_Pin;
@@ -730,8 +757,6 @@ static void MX_MOTOR_Init(void)
 	motor2.ISenseResistor = CURRENT_SENSE_RESISTOR;
 	motor2.RawRightCurrent = &adcBuffer[2];
 	motor2.RawLeftCurrent = &adcBuffer[8];
-	motor2.MaxChange = MAX_DUTY_CHANGE;
-
 
 	HAL_MOTOR_Init(&motor2);
 
@@ -742,7 +767,8 @@ static void MX_MOTOR_Init(void)
 	motor3.LeftTimerChannel=TIM_CHANNEL_4;
 	motor3.CutOfCurrent = CURRENT_DISABLE_LIMIT;
 	motor3.MaxCurrent = CURRENT_REGULATION_LIMIT;
-	motor3.MaxDuty = 255;
+	motor3.MaxDuty = 225;
+	motor3.MinDuty = MIN_DUTY;
 	motor3.DutyChangeFactor = DUTY_CHANGE_FACTOR;
 	motor3.EnableGPIOTypeDef = EN_3_GPIO_Port;
 	motor3.EnableGPIOPin = EN_3_Pin;
@@ -752,8 +778,6 @@ static void MX_MOTOR_Init(void)
 	motor3.ISenseResistor = CURRENT_SENSE_RESISTOR;
 	motor3.RawRightCurrent = &adcBuffer[2];
 	motor3.RawLeftCurrent = &adcBuffer[6];
-	motor3.MaxChange = MAX_DUTY_CHANGE;
-
 
 	HAL_MOTOR_Init(&motor3);
 
@@ -764,7 +788,8 @@ static void MX_MOTOR_Init(void)
 	motor4.LeftTimerChannel=TIM_CHANNEL_2;
 	motor4.CutOfCurrent = CURRENT_DISABLE_LIMIT;
 	motor4.MaxCurrent = CURRENT_REGULATION_LIMIT;
-	motor4.MaxDuty = 255;
+	motor4.MaxDuty = 225;
+	motor4.MinDuty = MIN_DUTY;
 	motor4.DutyChangeFactor = DUTY_CHANGE_FACTOR;
 	motor4.EnableGPIOTypeDef = EN_4_GPIO_Port;
 	motor4.EnableGPIOPin = EN_4_Pin;
@@ -774,8 +799,6 @@ static void MX_MOTOR_Init(void)
 	motor4.ISenseResistor = CURRENT_SENSE_RESISTOR;
 	motor4.RawRightCurrent = &adcBuffer[1];
 	motor4.RawLeftCurrent = &adcBuffer[5];
-	motor4.MaxChange = MAX_DUTY_CHANGE;
-
 
 	HAL_MOTOR_Init(&motor4);
 }

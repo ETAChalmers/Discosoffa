@@ -119,7 +119,7 @@ void Error_Handler(void);
 #define DUTY_CHANGE_FACTOR			0.1
 #define CURRENT_SENSE_RESISTOR		350
 #define MODE_CHANGE_TICKS			10
-#define MAX_DUTY_CHANGE				20;
+#define MIN_DUTY					20
 
 /* USER CODE END Private defines */
 

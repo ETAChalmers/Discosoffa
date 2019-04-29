@@ -43,7 +43,7 @@ typedef struct
 	GPIO_TypeDef *EnableGPIOTypeDef;
 	uint16_t EnableGPIOPin;
 	__IO uint32_t *RightCompareReg, *LeftCompareReg;
-	uint32_t TargetDuty, CurrentDuty, MaxDuty, MaxChange;
+	uint32_t TargetDuty, CurrentDuty, MaxDuty, MinDuty;
 	uint16_t *RawRightCurrent, *RawLeftCurrent, ISenseResistor;
 	float LeftCurrent, RightCurrent, CutOfCurrent, MaxCurrent, DutyChangeFactor;
 	MOTOR_ModeTypeDef TargetMotorMode, MotorMode;
@@ -60,8 +60,5 @@ void HAL_MOTOR_CalculateCurrent(MOTOR_HandleTypeDef *mot);
 void HAL_MOTOR_Update(MOTOR_HandleTypeDef *mot);
 void MOTOR_Disable(MOTOR_HandleTypeDef *mot);
 void MOTOR_Break(MOTOR_HandleTypeDef *mot);
-
-void MOTOR_SetDuty(MOTOR_HandleTypeDef *mot, uint16_t duty);
-
 
 #endif
