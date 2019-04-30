@@ -163,42 +163,51 @@ int main(void)
 
 	  HAL_NUNCHUCK_Read(&nun1);
 
-	  if((nun1.zButton != 1) || (nun1.cButton == 1))
+	  if(nun1.Connected != 1)
 	  {
-		  motorMode = HAL_MOTOR_MODE_BREAK;
-	  }
-	  else if(nun1.yJoy == 0)
-	  {
-		  motorMode = HAL_MOTOR_MODE_DISABLE;
-	  }
-	  else if(nun1.yJoy > 0)
-	  {
-		  motorMode = HAL_MOTOR_MODE_FORWARD;
-		  speed = nun1.yJoy*0xFF;
-	  }
-	  else if(nun1.yJoy < 0)
-	  {
-		  motorMode = HAL_MOTOR_MODE_REVERSE;
-		  speed = -nun1.yJoy*0xFF;
-	  }
+		  if((nun1.zButton != 1) || (nun1.cButton == 1))
+		  {
+			  motorMode = HAL_MOTOR_MODE_BREAK;
+		  }
+		  else if(nun1.yJoy == 0)
+		  {
+			  motorMode = HAL_MOTOR_MODE_DISABLE;
+		  }
+		  else if(nun1.yJoy > 0)
+		  {
+			  motorMode = HAL_MOTOR_MODE_FORWARD;
+			  speed = nun1.yJoy*0xFF;
+		  }
+		  else if(nun1.yJoy < 0)
+		  {
+			  motorMode = HAL_MOTOR_MODE_REVERSE;
+			  speed = -nun1.yJoy*0xFF;
+		  }
 
 
-	  if(nun1.xJoy > 0)
-	  {
-		  leftSpeed = speed;
-		  rightSpeed = (1.0f-nun1.xJoy)*speed;
-	  }
-	  else if(nun1.xJoy < 0)
-	  {
-		  rightSpeed = speed;
-		  leftSpeed = (1.0f+nun1.xJoy)*speed;
+		  if(nun1.xJoy > 0)
+		  {
+			  leftSpeed = speed;
+			  rightSpeed = (1.0f-nun1.xJoy)*speed;
+		  }
+		  else if(nun1.xJoy < 0)
+		  {
+			  rightSpeed = speed;
+			  leftSpeed = (1.0f+nun1.xJoy)*speed;
+		  }
+		  else
+		  {
+			  rightSpeed = speed;
+			  leftSpeed = speed;
+		  }
 	  }
 	  else
 	  {
-		  rightSpeed = speed;
-		  leftSpeed = speed;
+		  motorMode = HAL_MOTOR_MODE_BREAK;
+		  speed = 0;
+		  rightSpeed = 0;
+		  leftSpeed = 0;
 	  }
-
 	  motor1.TargetDuty = rightSpeed;
 	  motor3.TargetDuty = rightSpeed;
 
